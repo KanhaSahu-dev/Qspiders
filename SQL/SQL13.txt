@@ -1,0 +1,134 @@
+TCL
+----
+Transaction Control Language
+There are 3 statements of tcl.
+-------------------------
+commit,savepoint, rollback
+-------------------------
+
+Commit - to save the data 
+
+savepoint -It is used to mark the position 
+
+
+INSERT INTO STD2 VALUES('N' , '1');
+
+ROLLBACK
+-----------
+It will rollback to the point where we have commited for the last time.
+
+SQL> CREATE TABLE STD2 (
+  2      PRAJATI VARCHAR(255),
+  3      SID VARCHAR(255)
+  4  );
+
+Table created.
+
+SQL> INSERT INTO STD2('M','1');
+INSERT INTO STD2('M','1')
+                 *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword
+
+
+SQL> INSERT INTO STD2 (PRAJATI, SID) VALUES ('M', '1');
+
+1 row created.
+
+SQL> SAVEPOINT S1;
+
+Savepoint created.
+
+SQL> INSERT INTO STD2 VALUES ('F','2');
+
+1 row created.
+
+SQL> SAVEPOINT S2;
+
+Savepoint created.
+
+SQL> INSERT INTO STD2 VALUES('O','3');
+
+1 row created.
+
+SQL> SAVEPOINT S3;
+
+Savepoint created.
+
+SQL> SELECT * FROM STD2;
+
+PRAJATI                                                                         
+---------------------------------------------------------------------------
+M                                                                               
+F                                                                               
+O                                                                               
+
+SQL> ROLLBACK TO S3;
+
+Rollback complete.
+
+SQL> SELECT * FROM STD2;
+
+PRAJATI                                                                         
+---------------------------------------------------------------------------
+M                                                                               
+F                                                                               
+O                                                                               
+
+SQL> ROLLBACK TO S2;
+
+Rollback complete.
+
+SQL> SELECT * FROM STD2;
+
+PRAJATI                                                                         
+---------------------------------------------------------------------------
+M                                                                               
+F                                
+
+There are two statements of tcl
+
+Grant and Revoke 
+GRANT
+--------
+The grant statement is used to give the permission to the user.
+ GRANT SQL_STATEMENT ON TAB_NAME TO USER;
+
+REVOKE 
+---------
+It is used to take back permission from the user.
+REVOKE SQL_STATEMENT ON TAB_NAME FROM USER_NAME;
+
+*If account lock showing 
+
+in user->SYSTEM
+and pass->TIGER
+
+now write two lines
+
+
+Granting access
+SQL> GRANT SELECT ON EMP TO HR;
+
+Grant succeeded.
+
+SQL> 
+
+
+ALTER USER HR ACCOUNT UNLOCK;
+ALTER USER HR IDENTIFIED BY TIGER;
+user altered should show.
+
+REVOKING THE PERMISSION
+---------------------------
+SQL> REVOKE SELECT ON EMP FROM HR;
+
+Revoke succeeded.
+
+Join
+----
+
+
+
+
+                                               

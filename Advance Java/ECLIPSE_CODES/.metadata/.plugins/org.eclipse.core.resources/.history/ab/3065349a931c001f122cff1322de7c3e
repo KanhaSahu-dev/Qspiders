@@ -1,0 +1,11 @@
+package pack;
+
+import java.net.URL;
+
+public class URL_class {
+
+	public static void main(String[] args) {
+		URL url = new URL("https://ocsaly.com")
+	}
+
+}

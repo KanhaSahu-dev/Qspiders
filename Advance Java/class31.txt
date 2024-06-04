@@ -1,0 +1,16 @@
+Callable statement
+-------------------
+Callable statement is a child class of PreparedStatement.
+Callable statement is an interface.
+
+Callable Statement helps we can use Stored Procedures.
+
+Platform Creation
+-----------------
+prepareCall methdod is used to prepare a platform
+
+Advantage
+-----------
+It is stored in stored procedure so i have to go again and again.
+
+In stored procedure the arguments are in the format datatype then argument.

@@ -1,0 +1,26 @@
+Creating a platform/statement
+------------------------------
+
+We need a connection object without it we cant create a platform.
+
+There are 3 ways to create a statement or platform:-
+1.Statement
+2.PreparedStatement
+3.CallableStatement
+
+Here we can write and execute our queries.
+
+**getConnection returns a Connection type of object . With this I can create a platform any of the platform.
+
+1.Statement
+---------
+createStatement() calling creates an internal platform will be created to execute our queries.
+
+This createStatement is present in the Connection interface.
+
+Once platform is created then it will return Statement type object reference.
+
+execute() the query method is there in the Statement interface.
+
+If we insert the values in the same primary key then DuplicateKey Exception will be thrown.
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>HTML and CSS Information</title>
+    <style>
+        /* Add animations */
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideUp 1s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div class="container mx-auto p-4 animate-fade-in">
+        <h1 class="text-3xl font-bold mb-4" id="heading">Learn HTML and CSS</h1>
+        <p class="text-gray-300 animate-slide-up" id="intro">
+            HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets) are the building blocks of modern web development. They work together to create the structure, content, and visual presentation of web pages.
+        </p>
+        <p class="mt-4" id="htmlFeaturesTitle">Key Features of HTML:</p>
+        <ul class="list-disc ml-6 text-gray-300 animate-slide-up" id="htmlFeaturesList">
+            <li>Defines the structure and content of a web page using tags and elements.</li>
+            <li>Semantic elements like `&lt;header&gt;`, `&lt;nav&gt;`, `&lt;main&gt;`, and `&lt;footer&gt;` for better accessibility and SEO.</li>
+            <li>Supports multimedia elements like images, videos, and audio.</li>
+            <li>Forms and input fields for user interaction and data collection.</li>
+        </ul>
+        <p class="mt-4" id="cssFeaturesTitle">Key Features of CSS:</p>
+        <ul class="list-disc ml-6 text-gray-300 animate-slide-up" id="cssFeaturesList">
+            <li>Controls the visual styling of HTML elements, including layout, colors, fonts, and more.</li>
+            <li>Selectors for targeting specific elements or groups of elements.</li>
+            <li>Responsive design with media queries for adapting to different screen sizes.</li>
+            <li>Animations and transitions for adding motion and interactivity.</li>
+            <li>Preprocessors like Sass and Less for modular and maintainable stylesheets.</li>
+        </ul>
+        <p class="mt-4 animate-slide-up" id="outro">
+            HTML and CSS form the foundation of web development, enabling developers to create engaging and accessible websites that work seamlessly across various devices and platforms.
+        </p>
+    </div>
+
+    <!-- Include GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+    <script>
+        // Text animation using internal JavaScript
+        const heading = document.getElementById('heading');
+        const intro = document.getElementById('intro');
+        const htmlFeaturesTitle = document.getElementById('htmlFeaturesTitle');
+        const htmlFeaturesList = document.getElementById('htmlFeaturesList');
+        const cssFeaturesTitle = document.getElementById('cssFeaturesTitle');
+        const cssFeaturesList = document.getElementById('cssFeaturesList');
+        const outro = document.getElementById('outro');
+
+        // Function to start text animation
+        function startTextAnimation() {
+            gsap.fromTo(heading, { opacity: 0 }, { opacity: 1, duration: 1, ease: "power2.out" });
+            gsap.fromTo(intro, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 0.5, ease: "power2.out" });
+            gsap.fromTo(htmlFeaturesTitle, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 1, ease: "power2.out" });
+            gsap.fromTo(htmlFeaturesList.children, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 1.5, stagger: 0.2, ease: "power2.out" });
+            gsap.fromTo(cssFeaturesTitle, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 2.5, ease: "power2.out" });
+            gsap.fromTo(cssFeaturesList.children, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 3, stagger: 0.2, ease: "power2.out" });
+            gsap.fromTo(outro, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 4, ease: "power2.out" });
+        }
+
+        // Call the text animation function when the page loads
+        window.addEventListener('load', startTextAnimation);
+    </script>
+</body>
+</html>

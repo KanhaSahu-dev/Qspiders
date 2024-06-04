@@ -1,0 +1,60 @@
+Thread
+------
+Thread is a lightweight ,sub-process ,independent
+
+Multi-Threading
+---------------
+Multi-Tasking -> Performing multiple tasks simultaneously.
+
+Multi Tasking
+1.Process Based Multi Tasking
+2.Thread based Multi Tasking
+
+Process- 
+Process is the execution of a task.
+For each process separate space/memory is allocated.
+For each process atleast 1 thread is there.
+One thread is not dependent upon another thread.
+So threads are independent.
+
+Process based
+-------------
+heavy-weight
+costly
+lagging
+
+Thread based
+------------
+Independent
+Sub Process 
+Share memeory
+Light Weight
+
+JVM creates three important threads 
+-Main
+-Thread Scheduler
+-Garbage Collector
+
+JVM starts the main thread.
+Thread Scheduler :- is going to Schedule a thread when it is going to execute.
+It assigns thread to another thread memory if it is in sleep.
+
+Exception occurs in the main thread not in the main method.
+
+How can we create a Thread
+By extending the Thread Class
+You have to implement Runnable interface.
+
+Thread class is present in the java.lang package.
+Important methods are there:-
+-setPriority()
+-getPriority()
+-sleep() it pauses the thread for that much miliseconds given in the argument
+-join()
+-start()
+-run() 
+-getName() returns the current thread name.
+-setName() sets the current thread name.
+-currentThread() returns the current/main thread's object.
+
+When jvm created the main thread it is also stored in the jvm memory.

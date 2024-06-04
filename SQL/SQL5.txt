@@ -1,0 +1,64 @@
+LIKE OPERATOR
+---------------
+This operator is used to match the pattern in sql.
+Q) waqtd the name of the employees contains a as their first character?
+Q) waqtd the details of the employees contains S as their last character?
+SQL> select * from emp where ename like '%S';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+
+Q)waqtd the details of the employees along with their annual salary contains M as their first character and N as their last character?
+
+SQL> SELECT * FROM EMP WHERE ENAME LIKE 'M%N';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30
+
+Q)waqtd the name of the employees those contains 2 times A in their names?
+
+
+
+Q) waqtd contains two consecutive L in their names?
+
+Q)waqtd the job of the employees containing S as their second last character?
+SQL> select job from emp where job like '%S_';
+
+JOB
+---------
+ANALYST
+ANALYST
+
+Q)waqtd the name of the employees contains E as thier second last character ?
+SQL> select ename from emp where ename like '%E_';
+
+ENAME
+----------
+ALLEN
+JONES
+TURNER
+JAMES
+MILLER
+
+Q)waqtd the name and deptno of the emp contains U as second character?
+
+SQL>  select ename,deptno from emp where ename like '_U%';
+
+ENAME          DEPTNO
+---------- ----------
+TURNER             30
+
+Q)waqtd the hiredate of the employees who are hired in the month of april?
+
+
+SQL> select hiredate from emp where hiredate like '%APR%';
+
+HIREDATE
+---------
+02-APR-81
+19-APR-87
+

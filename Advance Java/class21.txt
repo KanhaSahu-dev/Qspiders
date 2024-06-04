@@ -1,0 +1,52 @@
+We need to connect java to database mainly to store the data permanently.
+
+5 steps of JDBC
+---------------
+
+1.Load and Register the driver.
+2.Establishing the Connection.
+3.Create a statement or platform.(Main reason is that we need a platform to execute the sql queries.)
+4.Execute the query . (This execution is also done in the platform).
+5.Close the connection/route.
+    ->Main reason of closing the connection is we have to close otherwise the resource leak will happen.
+
+API provide the interfaces.
+
+Interface
+---------
+Driver
+Connection
+Statement
+ConnectionStatement
+PreparedStatement
+CallableStatement
+ResultSet
+
+The interfaces implement classes are given in the driver.
+
+Helper class are the classes which has the factory methods.
+
+1.Load and Register
+
+Till JDK 1.4 VERSION IT IS MANDATORY TO LOAD AND REGISTER THE DRIVER because it is used to get the clarity which database it is using.
+
+After 1.4 internally everything will be done internally.
+
+
+This is done in two ways(loading and registering the driver):-
+a)new keyword:-creating a object of the driver class and load it later using that.
+b)forName:- 
+
+
+We need to create a object of the interface Driver's object so we can create in it's implementation class present in the com.mysql.cj.jdbc , this object (Driver interface objecct) we need to pass it to the registerDriver() method.
+
+
+Driver class is present in the com.mysql.cj.jdbc
+create a object of the JDBC driver class.
+
+We create a mysql jdbc driver and store in the java.sql.Driver(this is an interface) e.g.,
+
+java.sql.Driver d = new com.mysql.cj.jdbc.Driver();
+
+This d has to be passed in the method registerDriver() method.
+registerDriver() method is present in the DriverManager.

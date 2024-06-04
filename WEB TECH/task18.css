@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color:white;
+}
+
+.main_body{
+    width: 100%;
+    height: 75px;
+    color: white;
+    background-color: black;
+    display: flex;
+    margin-top:35px;
+    font-size:larger;
+}
+
+.heading{
+    margin-top: 15px;
+}
+
+.left_nav{
+    width: 40%;
+    height: 100%;
+    /* background-color: red; */
+}
+.left_nav>ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+.left_nav>ul>li{
+    padding: 10px;
+    border-radius: 10px;
+}
+.left_nav>ul>li:hover{
+    border-bottom: 1px solid gainsboro;
+    background-color: rgba(128, 128, 128, 0.29);
+    
+}
+.right_nav{
+    width: 60%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+}
+.search{
+    width: 75%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search>input{
+    width: 80%;
+    height: 55%;
+    background-color: rgb(189, 220, 230);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.search>input:focus{
+    background-color: rgba(189, 243, 241, 0.746);
+}
+.logo{
+    width: 25%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo_img{
+    width: 40px;
+    height: 40px;
+    /* background-color: red; */
+    border-radius: 50%;
+    background-image: url(./boy\ standing\ alone\ on\ hill.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo > button{
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(red, orange, yellow);
+    color: white;
+    cursor: pointer;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+}
+.work{
+    color: red;
+}
+.hard{
+    color: blue;
+}
+.dream{
+    color: orange;
+}
+.big{
+    color: rgba(239, 239, 113, 0.816);
+}
+.main{
+    width: 100%;
+    /* height: 150vh; */
+    /* background-color: blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    
+}
+.main > .item {
+    width: 12%;
+    height: 194px;
+    border: 2px solid goldenrod;
+    background-color: black;
+    margin: 7%;
+    background: url(./MEDIA/photos/shreya_photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; /* Add position relative to create a stacking context */
+    border-radius: 28px;
+    transition: 1s;
+}
+
+.main > .item:after {
+    content: ""; /* Change content to an empty string */
+    height: 50%; /* Set height to cover the entire item */
+    width: 100%; /* Set width to cover half of the item */
+    background-color: transparent; /* Set background color to transparent */
+    position: absolute; /* Set position to absolute to position it within the .item */
+    bottom: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+}
+
+.item:hover{
+    box-shadow: 8px 2px 10px rgb(156, 155, 155);
+}
+
+.item:hover:after{
+    background: rgba(255, 255, 255, 0.3); /* Adjust the color and opacity as needed */
+    backdrop-filter: blur(10px);
+    content:"Shreya Ghosal";
+    font-weight:bold;
+    font-size:20px;
+    overflow: hidden;
+}
+
+
+
+/* .item:hover{
+    box-shadow: 5px 5px 5px 5px gray;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* filter:blur(5px); */
+/* } */
+p{
+    font-size: 20px;
+}

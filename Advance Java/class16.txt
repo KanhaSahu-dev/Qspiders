@@ -1,0 +1,36 @@
+Conversion of array to Stream
+-----------------------------
+Q) Replace all the "e" in the string array.
+
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+public class class16 {
+    public static void main(String[] args) {
+        String[] str = {"hii","hello","namaste","tata","goodbye","helmet","none"};
+
+    Stream<String> stream = Arrays.stream(str);
+    stream.map(s->s.replace("e","")).forEach(s->System.out.println(s));
+    }
+}
+
+OUTPUT
+------
+hii
+hllo
+namast
+tata
+goodby
+hlmt
+non
+
+IntStream
+----------
+IntStream present in the java.util.stream package.
+
+Methods:-
+---------
+
+anyMatch    
+noneMatch
+range :- It is a static method also it returns IntStream type of object.

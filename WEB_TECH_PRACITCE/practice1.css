@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.nav{
+    padding: 5px;
+    padding-left:15px;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 824px;
+    height:45px;    
+    color: rgb(174, 173, 173);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top:10px;
+}
+.nav>a{
+    text-decoration: none;
+    color:white;
+    font-size:1em;
+    padding:0px 6%;
+    display: inline-block;
+    z-index: 1;
+}
+
+.nav>span{
+    position:absolute;
+    background: linear-gradient(to right,brown,red);
+    left:11%;
+    height:75%;
+    width:10%;
+    border-radius: 8px;
+    display:inline-block;
+    transition: 1s;
+}
+
+.nav>a:nth-child(2):hover~span{
+    position:absolute;
+    background: linear-gradient(to right,brown,red);
+    left:28%;
+    height:75%;
+    width:10%;
+    border-radius: 8px;
+    display:inline-block;
+}
+.nav>a:nth-child(3):hover~span{
+    position:absolute;
+    background: linear-gradient(to right,brown,red);
+    left:45%;
+    height:75%;
+    width:10%;
+    border-radius: 8px;
+    display:inline-block;
+}
+.nav>a:nth-child(4):hover~span{
+    position:absolute;
+    background: linear-gradient(to right,brown,red);
+    left:64%;
+    height:75%;
+    width:10%;
+    border-radius: 8px;
+    display:inline-block;
+}
+.nav>a:nth-child(5):hover~span{
+    position:absolute;
+    background: linear-gradient(to right,brown,red);
+    left:81%;
+    height:75%;
+    width:10%;
+    border-radius: 8px;
+    display:inline-block;
+}

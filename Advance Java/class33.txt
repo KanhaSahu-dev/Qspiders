@@ -1,0 +1,53 @@
+Servlets
+--------
+Servlet is a set of rules/specifications used to build dynamic web applications.
+
+Servlet is an API.Apis are in the form of jar files.
+
+Here two packages are there.
+1.javax.servlet
+2.javax.servlet.http package
+
+Entire servlet is based on the two packages.
+Servlet is a package also.
+Servlet is an interface also.
+Servlet is a server side program.
+
+Since main method is executed bcoz jvm is there .
+In case of servlet we dont need the main mehtod as the java virtual machine is not needed.
+
+API present inside the server itself.
+
+Interfaces and Classes inside the javax.servlet
+-----------------------------------------------
+
+1.Interfaces
+----------
+Servlet 
+ServletRequest
+ServletResponse
+ServetConfig
+ServletContext
+RequestDispatcher
+FilterApi:-
+-Filter
+-FilterChain
+-FilterConfig
+
+2.Classes
+----------
+GenericServlet
+ServletException
+
+Workflow of Servlet
+--------------------
+Client technically refers to the Browser not tabs.
+Inside the server applications will be there and inside them resources are there.
+There is no limit on how many applications I can deploy(I doubt so).
+Similarly there is no limit on how many classes are there in an applications.
+
+So in web applications we are going to use the xml configuration files.
+
+When a user sends a request there has to be a class which is going to accept the request that request is going to be accepted by a "web.xml" configuration file on it which helps the server to decide which application it is going to send the information.
+
+The alternative name of the web.xml file is deployment development stub.

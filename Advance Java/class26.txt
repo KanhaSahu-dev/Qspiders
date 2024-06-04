@@ -1,0 +1,35 @@
+ResultSet
+---------
+ResultSet is an interface present in java.sql package.
+ResultSet is used for fetching a data.
+
+ExecuteQuery method
+-------------------
+
+
+    --Story of next,nextInt,nextBoolean ... and nextLine()
+    -------------------------------------------------------
+
+    all others give /n if it is not there if it is there it will not add /n in the buffer memory.
+    nextLine() removes the only 1 /n if it is there in the buffer memory.
+
+    Buffer memory is a temporary storage which stores the data temporarily.
+
+ExecuteQuery method copies all the data from the database to the buffer memory.
+To fetch the data from the buffer memeory we have 2 methods.
+
+1.next() method:- It will check whether the current row is present or not.
+
+first time calling the next() method it moves the cursor to the next row and checks whether the data is present or not it will return true if it is present or not.And return false if it is not there.
+
+further calling of next() method moves the cursor to the next row.
+
+2.get***(index)
+
+
+
+
+TASK
+-----
+user going to give email and password
+Whether it is present or not check  

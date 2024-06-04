@@ -1,0 +1,1 @@
+A constant cannot change value through assignment or be re-declared while the script is runningIt must be initialized to a value

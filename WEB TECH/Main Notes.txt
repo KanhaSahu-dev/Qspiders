@@ -1,0 +1,73 @@
+What is the difference between http and https ?
+HTTP (Hypertext Transfer Protocol) and HTTPS (Hypertext Transfer Protocol Secure) are both protocols used for communication over the Internet. Here are the key differences between them:
+
+Security:
+
+HTTP: It is not a secure protocol. Data sent using HTTP is transmitted in plain text, which means that it could be intercepted and read by attackers. This lack of encryption poses a security risk, especially when transmitting sensitive information such as login credentials or financial details.
+
+HTTPS: It is a secure version of HTTP. It uses a secure protocol called SSL/TLS to encrypt the data transmitted between the web server and the client. This encryption helps to protect the integrity and confidentiality of the data, making it much more secure than HTTP.
+
+Encryption:
+
+HTTP: Data is transmitted in plain text, making it susceptible to eavesdropping and man-in-the-middle attacks.
+
+HTTPS: Data is encrypted using SSL/TLS, ensuring that even if intercepted, it cannot be easily understood by unauthorized parties.
+
+Port:
+
+HTTP: Typically uses port 80 for communication.
+
+HTTPS: Typically uses port 443 for communication.
+
+URL:
+
+HTTP: The URL begins with "http://".
+
+HTTPS: The URL begins with "https://". The "s" stands for secure.
+
+Certificates:
+
+HTTP: Does not use SSL/TLS certificates.
+
+HTTPS: Requires an SSL/TLS certificate to establish a secure connection. This certificate is issued by a trusted Certificate Authority (CA) and helps users verify the authenticity of the website.
+
+What is server?
+A server is a computer program or a device that provides services, resources, or functionality to other devices or programs, known as clients, within a network. Servers play a crucial role in facilitating communication, managing resources, and delivering various services across computer networks, such as the internet or local intranets. Here are some key aspects of servers:
+
+What is browser?
+A web browser, commonly known as a browser, is a software application used to access and view information on the World Wide Web. It acts as an interface between users and the internet, allowing them to retrieve and display web pages, interact with online content, and navigate between different websites
+
+what is database
+A database is a structured collection of data that is organized and stored in a way that makes it easy to manage, retrieve, update, and manipulate. Databases are a fundamental component of modern computing and are used to store and organize data for various applications.
+
+Types of databases
+Relational Databases (RDBMS)
+NoSQL Databases
+Key-Value Stores
+Document Stores
+Column-Family Stores
+Graph Databases
+Graph Databases
+In-Memory Databases
+Time-Series Databases
+Wide-Column Stores
+Object-Oriented Databases
+Spatial Databases
+
+1. World Wide Web (www): The www is an integral part of the internet, enabling global information sharing through hyperlinked documents.
+
+2. Internet: The internet is a vast network connecting devices worldwide, facilitating communication, information exchange, and online services.
+
+3. Web Browser: Web browsers, like Chrome or Firefox, provide user interfaces for accessing and navigating the World Wide Web, interpreting and displaying web content.
+
+4. Web Server: A web server hosts and serves web content, responding to requests from browsers by delivering web pages and resources over the internet.
+
+5. Web Site Types: Websites vary, with static sites presenting fixed content, while dynamic sites offer interactive and personalized content, meeting diverse user needs.
+
+6. Comments: In programming, comments provide explanations within code, enhancing readability for developers and serving as documentation to understand the purpose and functionality of the code.
+
+Lists
+
+Ordered Lists :- They have a particular order like 1,I, i etc.
+Unordered Lists:- Then dont need to represent a particular order like square, discs, etc
+Desciption Lists :- 

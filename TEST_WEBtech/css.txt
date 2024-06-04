@@ -1,0 +1,2 @@
+Pseudo Class first letter
+Allowed for block level and will not work if images or other things are there.

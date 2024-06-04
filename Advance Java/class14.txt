@@ -1,0 +1,119 @@
+Method Reference
+-----------------
+Here We can simply implement the body of a method inside the class and it can be referred to the abstract method's implementation of a Functional Interface.We dont need to create inheritance and then implement it.
+
+e.g.,
+
+interface ABC{
+    void hii();
+}
+
+public class class14 {
+    public void m1(){
+        
+        System.out.println("A very Happy Day");
+    }
+
+    public static void main(String[] args){
+        ABC obj1 = ()->{
+            System.out.println("hello");
+        };
+        obj1.hii();
+        class14 obj2 = new class14();
+        ABC in2 = obj2::m1;
+        in2.hii();
+    }
+
+    
+}
+
+interface DEF{
+    void m1();
+}
+
+public class Demo3{
+    public static void dingi(){
+        System.out.println("Dingi is smiling");
+    }
+
+    public static void dinga(){
+        System.out.println("Dinga said hii");
+    }
+
+    public static void main(String[] args) {
+        DEF obj1 = Demo3 :: dingi;
+        obj1.m1();
+
+        DEF obj2 = Demo3 :: dinga;
+        obj2.m1();
+    }
+}
+
+
+
+There is no restriction on the modifiers not also on void return type.
+
+But there is retriction on return type if it is primitive type return types if it is in the functional interface.
+
+Restriction is also there in the arguments .
+
+Suppose we have abstract method reference type as a void then we can give whatever return type for the implementation method inside the implemented class.
+
+e.g.,
+
+interface A{
+    void m1();
+}
+
+public class hii{
+    public static boolean dimbaka(){
+        System.out.println("hello");
+        return true;
+    }
+
+    public static void main(String args[]){
+        A a = hii::dimbaka;     //This can be done.
+    }
+}
+
+
+return type is primitive in the abstract method.
+
+interface A{
+    int m1();
+}
+
+public class hii{
+    public static boolean dimbaka(){    //This will show error.
+        System.out.println("hello");
+        return true;
+    }
+
+    public static void main(String args[]){
+        A a = hii::dimbaka;     //This can be done.
+    }
+}
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.Arrays;
+
+public class Demo3{
+    public static void m1(int a){
+        System.out.println(a);
+    }
+    public static void main(String...args){
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6);
+        Consumer<Integer> c1 = s->{
+            System.out.println(s);
+        };
+        list.forEach(c1);
+System.out.println();
+        Consumer<Integer> consumer = Demo3::m1;
+        list.forEach(consumer);
+System.out.println();
+        Consumer<Integer> c = System.out::println;
+        list.forEach(c);
+    }
+}

@@ -1,0 +1,38 @@
+Batch Processing
+---------------
+Executing multiple statements in one shot.
+When we run queries normally it will go to the database and search the related data in the database that much number of times.This is inefficient .
+
+To solve this problem we can store the queries in a batch then i will give the batch to the mysql workbench .It is far more efficient.This is called as batch processing.
+
+Multiple queries will be inserted in one batch then we will execute in one go.
+
+Batch Processing is used for DML queries.
+
+addBatch(sql) [present in statement]
+addBatch() [present in PreparedStatement]
+
+executeBatch():- execute the batch method at a time all the rows inserted in a batch.
+executeBatch() has a return type as an integer.
+
+DTO stands for tranfering data through this object.In DTO encapsulated classes are there.
+
+DAO stands for data access objects.(To access or for communicating to the database).(Database interaction layer) So any exception occurs in the database we can come to the DAO.
+
+Controller is the place  where will use the datas and all. It is the main method.Input is taken here 
+
+
+
+task 
+----
+after fetching the data, store in an  Employee object , add the objects in the list finally return the object.
+
+console
+HomePage
+1.save(get the data from the user)
+2.Login
+3.fetchAll
+4.fetchById
+5.DeleteById
+6.UPdateById
+7.exit.

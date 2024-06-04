@@ -1,0 +1,181 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.nav{
+    display:flex;
+    justify-content:center;
+    padding:10px;
+    border:2px solid black;
+    position:relative;
+    top:10px;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    font-size:23px;
+}
+
+.categories{
+    display: inline-block;
+    height:90%;
+    cursor: pointer;
+}
+
+.catalog{
+    content: "";
+    border:2px solid black;
+    width:13%;
+    height:280px;
+    position:absolute;
+    top:45px;
+    left:30px;
+    display: none;
+    padding:10px;
+    cursor: pointer;
+}
+
+.categories:hover .catalog{
+    display:block;
+    position:absolute;
+    z-index: 1;
+    background-color: white;
+}
+
+
+
+.search{
+    display: inline-block;
+    border: 2px solid black;
+    width: 27%;
+    border-radius: 25px;
+    padding: 10px;
+    position: relative;
+    height: 38px;
+}
+
+.input_search{
+    position: absolute;
+    top:9px;
+    width:70%;
+    left:10%;
+    height:50%;
+    font-size:15px;
+    border:none;
+    outline:none;
+}
+
+
+
+.fa-magnifying-glass{
+    font-size:20px;
+    position:absolute;
+    top:8px;
+}
+
+.fa-cart-shopping{
+    font-size:22px;
+}
+
+.login{
+    padding: 5px 10px;
+    height: 34px;
+    width:5%;
+    background-color: white;
+}
+
+.signup{
+    background-color: black;
+    color:white;
+    height: 34px;
+    width:5%;
+}
+
+.world{
+    height:36px;
+    width:3%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+
+
+.catalog>.fa-greater-than{
+    position: absolute;
+    right:0;
+}
+
+.image{
+    background: url(https://cdn.pixabay.com/photo/2024/02/19/14/01/mountains-8583450_640.jpg);
+    height:92vh;
+    width:100%;
+    background-repeat: no-repeat;  
+    background-size: cover;  
+    position:relative;
+    top:20px;
+    background-size: 100% 92%;
+}
+
+.image:hover{
+    scale:1.03;
+}
+
+.header{
+    display:block;
+}
+
+.tech{
+    height:80%;
+    width:5%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box{
+    border:2px solid black;
+    width:14%;
+    height:150px;
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    color:rgb(0, 0, 0);
+    display: none;
+}
+
+ .tech:hover .box{
+    content:"";
+     display: block ; 
+     position: absolute;
+    z-index:1;
+    left:46%;
+    text-align: center;
+    top:80%;
+    cursor: pointer;
+} 
+
+.box>.span1{
+    border:2px solid rgb(255, 255, 255);
+    display: inline-block;
+    width:85%;
+    height:15%;
+    color:white;
+    background-color: black;
+}
+
+.catalog>span{
+    outline:8px;
+}
+
+.catalog>span>i{
+    margin-left:65%;
+}
+
+.catalog>span:hover{
+    background-color: gray;
+}

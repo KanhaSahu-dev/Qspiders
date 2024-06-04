@@ -1,0 +1,72 @@
+<!-- we have to understand that we give justify content center and align items center then it will only apply to the child elements not the grand child elements. -->
+
+<!-- transform:scale(1.1) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height:100vh;
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .div{
+            height:400px;
+            width:400px;
+            background: url(./MEDIA/photos/arijit_photo.jpg);
+            background-size:cover;
+            position:relative;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .div:after{
+            content: "Dinga";
+            position:absolute;
+            height:50%;
+            width:100%;
+            bottom:0;
+            /* background-color: transparent; */
+        }
+
+        .div:hover:after{
+            background: rgba(255, 255, 255, 0.492);
+            backdrop-filter:blur(10px);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+
+    </div>
+    <div class="div">
+
+    </div>
+    <div class="div">
+
+    </div>
+    <div class="div">
+
+    </div>
+    <div class="div">
+
+    </div>
+    <div class="div">
+
+    </div>
+    <div class="div">
+
+    </div>
+</body>
+</html>

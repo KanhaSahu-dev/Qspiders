@@ -1,0 +1,4 @@
+Functional Interface 
+Annotation @FunctionalInterface
+
+gives warning if we try to add another abstract method.

@@ -1,0 +1,16 @@
+*{
+    border: 2px solid black;
+    
+}
+#second{
+    background-color: aquamarine;
+    border: 2px solid black;
+    height: 90px;
+    width: 90px;
+}
+.clas{
+    background-image: linear-gradient(to right,red , blue,green,yellow);
+    border: 2px solid black;
+    height: 90px;
+    width: 90px;
+}

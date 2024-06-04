@@ -1,0 +1,72 @@
+SUBQUERY
+----------
+The query written inside another query is known as sub query.
+
+Uses of subquery
+----------------
+Whenever we have unknown condition then we should go for subquery.
+
+Q)WAQTD THE DETAILS OF THE EMP THOSE ARE WORKING IN DEPTNO 20?
+
+SQL> SELECT * FROM EMP
+  2  WHERE DEPTNO = 20;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+
+
+Q)WAQTD THE DETAILS OF THE EMP THOSE ARE WORKING IN DEPTNO SAME AS SMITH?
+
+SQL> SELECT * FROM EMP 
+  2  WHERE DEPTNO = (SELECT DEPTNO FROM EMP 
+  3  WHERE ENAME='SMITH');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+
+Inner query executes first.
+Every sub query has minimum 2 queries like outer queries and inner queries.
+The output of the inner query acts as input to the outer query.
+
+Q)WAQTD THE DETAILS OF THE EMP EARNING MORE THAN MILLER?
+
+
+SQL> SELECT * FROM EMP
+  2  WHERE SAL>(SELECT SAL FROM EMP WHERE ENAME='MILLER');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+
+Q)WAQTD THE NAME AND HIREDATE OF THE EMP THOSE ARE HIRED AFTER JONES?
+
+Q)WAQTD THE NAME,SALARIES AND DEPTNO OF THE EMPLOYEES THOSE ARE EARNING MORE THAN 2000 AND WORKING IN SAME DEPTNO AS JAMES?
+
+Q)WAQTD THE NAME AND SAL OF THE EMP THOSE ARE EARNING MORE THAN ALLEN BUT LESS THAN KING?
+
+SQL> SELECT ENAME,SAL FROM EMP WHERE SAL>(SELECT SAL FROM EMP WHERE ENAME='ALLEN') AND SAL<(SELECT S
+AL FROM EMP WHERE ENAME='KING');
+
+Q)WAQTD THE NAME AND HIREDATE OF THE EMPLOYEES THOSE ARE HIRED AFTER JONES AND CONTAINS S AS THEIR LAST CHARACTER?
+
+
+Q)WAQTD THE NAME OF THE EMP WORKING IN SAME DEPTNO AS JAMES AND EARNING SALARY MORE THAN ADAMS AND WORKING IN SAME JOB ROLE AS MILLER AND HIRED AFTER MARTIN?
+
+Q)WAQTD THE NAME AND DESIGNATION OF THE EMPLOYEES THOSE ARE WORKING IN THE SAME DESIGNATION AS CLARK?

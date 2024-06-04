@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Border Bottom Transition</title>
+  <style>
+    .border-transition {
+      display: inline;
+      font-size: 24px;
+      padding-bottom: 8px;
+      position: relative;
+      /* overflow: hidden; */
+    }
+
+    .border-transition:after {
+        border:2px solid black;
+      content: "";
+      position: absolute;
+      /* bottom: 0; */
+      /* left: 0; */
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(to right, red 0%, red 50%, transparent 50%, transparent 100%);
+      background-size: 200% 200%;
+      transition:  1s ease;
+    }
+
+    .border-transition:hover:after {
+      width: 200%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="border-transition">Hover me</div>
+
+</body>
+</html>

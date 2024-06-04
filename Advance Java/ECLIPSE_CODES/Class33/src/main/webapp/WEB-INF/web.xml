@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>Class33</display-name>
+  
+  <servlet>
+  	<servlet-name>MyFirst</servlet-name>
+  	<servlet-class>com.org.Class33</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>MyFirst</servlet-name>
+  <url-pattern>/hii</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Magicians</servlet-name>
+  <servlet-class>com.org.Second_servlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Magicians</servlet-name>
+  <url-pattern>/magic</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Magicians3</servlet-name>
+  <servlet-class>com.org.Third_servlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Magicians3</servlet-name>
+  <url-pattern>/magic3</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>Magicians4</servlet-name>
+  <servlet-class>com.org.Fourth_servlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Magicians4</servlet-name>
+  <url-pattern>/index2</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

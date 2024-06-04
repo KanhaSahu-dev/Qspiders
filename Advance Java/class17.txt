@@ -1,0 +1,14 @@
+ADVANCE  JAVA
+Jar
+It stands as java archive, it is a zip file format.
+Jar contains all the packages and JDK.
+Contains .java file, .class file,.config file and .xml file.
+why to use jar
+imagine there is an scenario where 2 files are inside of 2 separate packages in different project section which is more likely to be not possible but with the help of jar we can store all of the things like packages and all to jar and can use it. The developers mostly change the jar version/ update the jar version and we use it as the latest version.
+Example – import of scanner class, it is presents inside of jar.
+Jar Is of 2 types
+Executable Jar
+ 	These are library files which doesn’t contain the main method. We can’t run it.
+
+Runnable Jar
+ 	Main method is there but only used for running.

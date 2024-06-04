@@ -1,0 +1,92 @@
+start() creates stack which has a frame in it where run method  is there and if any exception happens inside the main thread it will not happen inside the another thread or the other stack.
+
+Using Thread reference we can call start() method only once.
+
+what is the difference between creating a stack by calling start() method and creating a stack externally?
+
+We cant call start() method twice.
+
+It is possible to override the start() method but multithreading will not happen.
+
+MULTI THREADING
+
+Multithreading in java is a process of executing multiple threads simultaneously.
+
+A thread is a lightweight sub-process. The smallest unit of processing. Multiprocessing and multithreading, both are used to achieve the multi-tasking.
+
+Multi-tasking: -
+
+→Multi-tasking is a process of executing multiple tasks simultaneously. Multi-tasking can be achieved in two ways.
+
+Process-based Multitasking(multiprocessing)
+
+Thread-based Multitasking(multithreading)
+
+1. Process-based Multi-tasking(multiprocessing)
+
+Each Process allocates a separate memory area.
+
+A process is heavyweight.
+
+Cost of communication between the process is high
+
+Switching from one process to another requires some time for saving and loading registers, memory maps etc.,
+
+2. Thread-based Multitasking (Multithreading)
+
+Threads share the same address space.
+
+Threads share the same address space.
+
+A thread is lightweight.
+
+Cost of communication between the thread is low.
+
+Note: At least one process is required for each thread.
+
+When we run our Java Program internally JVM starts threads Namely,
+
+→ Main
+
+→Thread scheduler
+
+→Garbage Collector
+
+main thread: -
+
+The main thread acts as the main () method of the program, which is the entry point of the program.
+
+thread scheduler: -
+
+The thread scheduler picks up those threads that are in the Runnable state. When there are multiple threads in Runnable state, there is no guarantee which thread it picks up first.
+
+garbage collector: -
+
+When Java programs run on the JVM, objects are created on the heap area, which is a portion of memory dedicated to the program. Eventually, some objects will no longer be needed. The garbage collector finds these unused objects and deletes them to free up memory.
+
+How to Create a Thread in Java?
+
+There are two ways to create a thread:
+
+1. By extending Thread class . By making a is a relationship
+
+2. By implementing Runnable interface. By making a is a relationship
+
+1. By extending Thread class:
+
+Thread class: -
+
+Thread class provide constructors and methods to create and perform operations on thread. Thread class extends Object class and implements Runnable interface.
+
+Steps to create a thread by extending thread class: -
+
+→Create a class that extends Thread class
+
+→ Now override the run () method and write the logic that you have to run multiple times
+
+→ Create an object of thread type
+
+→ Call the start () method.
+
+one thread prints 2 multiplication table format="2*1=2"
+main thread 5 multiplication table."5*1=5"

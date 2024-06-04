@@ -1,0 +1,72 @@
+Q)WAQTD THE SECOND MAXIMUM SAL OF THE EMPLOYEES?
+
+SQL> SELECT MAX(SAL) FROM EMP
+  2  WHERE SAL<(SELECT MAX(SAL) FROM EMP);
+
+  MAX(SAL)
+----------
+      3000
+
+Q)WAQTD THE THIRD MAX SAL OF THE EMPLOYEES?
+
+SQL> SELECT MAX(SAL) FROM EMP
+  2  WHERE SAL<(SELECT MAX(SAL) FROM EMP);
+
+  MAX(SAL)
+----------
+      3000
+
+DDL
+-----
+There are 5 statements of DDL .
+1)CREATE 
+2)RENAME
+3)ALTER
+4)DROP
+5)TRUNCATE 
+
+CREATE 
+The create command in sql is used to construct a table or object in the database.
+
+CREATE TABLE TAB_NAME
+(COL-1 DATATYPE CONSTRAINT,
+COL-2 DATATYPE CONSTRAINTS);
+
+RENAME 
+---------
+It is used to change the name of the object or table.
+
+RENAME TAB_NAME TO NEW_NAME;
+
+DROP
+-----
+The drop command is used to delete the table from the database.
+
+Q)How to delete the table from database?
+DROP TABLE EMP1;
+
+SQL> SELECT * FROM TAB;
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEPT                           TABLE
+EMP                            TABLE
+BONUS                          TABLE
+SALGRADE                       TABLE
+BIN$k5zOzbKyS4y/QrwmMH13gw==$0 TABLE
+STD1                           TABLE
+STD2                           TABLE
+BIN$PzDQJIMmR8WsJMqh8gFnHQ==$0 TABLE
+
+Q)How to recover the table from the bin folder?
+
+FLASHBACK TABLE TAB_NAME TO BEFORE DROP
+
+Q)How to delete the table from bin folder?
+
+
+SQL> PURGE TABLE EMP1;
+
+Table purged.
+
+

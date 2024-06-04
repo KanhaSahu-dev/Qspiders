@@ -1,0 +1,174 @@
+MultiRow Function
+==================
+It is used to take multiple inputs at a time and it provides only a single output.
+
+There are 5 types of multirow functions :-
+1)MAX()
+2)MIN()
+3)AVG()
+4)SUM()
+5)COUNT()
+
+MULTIROW FUNCTION CAN ACCEPT ATMOST ONE ARGUMENT.
+Along with multirow function we cannot display any other column name in select clause.
+The multirow functions ignores null values.
+We cannot use multirow functions with where clause.
+Count is the only multirow function which can accept star as an argument 
+
+Q)waqtd the max sal of the employees ?
+SQL> SELECT MAX(SAL) FROM EMP;
+
+  MAX(SAL)
+----------
+      5000
+
+Q)waqtd the min of sal of the emp?
+SQL> SELECT MIN(SAL) FROM EMP;
+
+  MIN(SAL)
+----------
+       800
+
+Q)waqtd the avg of the emp?
+SQL> SELECT AVG(SAL) FROM EMP
+  2  ;
+
+  AVG(SAL)
+----------
+2073.21429
+
+Q)WAQTD THE TOTAL SAL GIVEN TO THE EMP?
+SQL> SELECT SUM(SAL) FROM EMP;
+
+  SUM(SAL)
+----------
+     29025
+
+Q)WAQT COUNT THE TOTAL NO. OF EMP?
+SQL> SELECT COUNT(*) FROM EMP;
+
+  COUNT(*)
+----------
+        14
+
+Q)WAQT COUNT OF COMM FROM EMP?
+SQL> SELECT COUNT(COMM) FROM EMP;
+
+COUNT(COMM)
+-----------
+          4
+
+Q)WAQTD THE TOTAL SALARY GIVEN TO MANAGER?
+
+SQL> SELECT SUM(SAL) FROM EMP WHERE JOB='MANAGER';
+
+  SUM(SAL)
+----------
+      8275
+
+Q) WAQT COUNT THE TOTAL NO. OF SALESMAN?
+
+SQL> SELECT COUNT(JOB) FROM EMP WHERE JOB='SALESMAN';
+
+COUNT(JOB)
+----------
+4
+
+Q)WAQTD THE NO. OF EMPLOYEES EARNING MORE THAN 1500 IN DEPTNO 20?
+
+SQL> SELECT COUNT(*) FROM EMP WHERE DEPTNO=20 AND SAL>1500;
+
+  COUNT(*)
+----------
+         3
+
+Q) WAQTD THE MIN SAL GIVEN TO THE EMPLOYEES WORKING AS CLERK IN DEPTNO 10 OR 20 ?
+
+SQL> SELECT MIN(SAL) FROM EMP WHERE JOB='CLERK' AND (DEPTNO=10 OR DEPTNO=20);
+
+  MIN(SAL)
+----------
+       800
+
+Q) WAQTD THE TOTAL NO. OF EMP HAVING CHARACTER E IN THEIR NAMES?
+SQL> SELECT COUNT(*) FROM EMP WHERE ENAME LIKE '%E%';
+
+  COUNT(*)
+----------
+         6
+
+GROUP BY CLAUSE
+------------------
+It is used to create the groups .
+We can use multiple multi-row functions with group by clause.
+Flow of Execution
+----------------
+1) FROM
+2) WHERE
+3) GROUP BY
+4) SELECT
+
+Q)WAQT COUNT THE NO. OF EMP WORKING IN EACH DEPT?
+SQL> SELECT COUNT(*),DEPTNO FROM
+  2  EMP GROUP BY DEPTNO;
+
+  COUNT(*)     DEPTNO
+---------- ----------
+         6         30
+         5         20
+         3         10
+
+-Group by clause executes row by row .
+-After the execution of the group by clause we will get the groups it means any clause that executes after group by clause must be executes in groups.
+-The group by clause can be used with or without where clause .
+
+Q)WAQTD THE TOTAL NO OF EMP WORKING IN EACH DEPT EXCEPT DEPTNO 30?
+
+SQL> SELECT COUNT(*) FROM EMP WHERE DEPTNO!=30 GROUP BY DEPTNO;
+
+  COUNT(*)
+----------
+         5
+         3
+Q) WAQTD THE NO OF EMP WORKING IN EACH JOB?
+SQL> SELECT COUNT(*),JOB FROM EMP GROUP BY JOB;
+
+  COUNT(*) JOB
+---------- ---------
+         4 CLERK
+         4 SALESMAN
+         1 PRESIDENT
+         3 MANAGER
+         2 ANALYST
+
+Q)WAQTD THE TOTAL NO EMP WORKING IN EACH JOB HAVING CHARACTER A IN THEIR NAMES?
+SQL> SELECT COUNT(*),JOB FROM EMP WHERE ENAME  LIKE '%A%' GROUP BY JOB;
+
+  COUNT(*) JOB
+---------- ---------
+         3 SALESMAN
+         2 CLERK
+         2 MANAGER
+
+Q)WAQTD THE TOTAL NO . OF EMP WORKING AS MANAGER IN EACH DEPT?
+SQL> SELECT COUNT(*),DEPTNO FROM EMP WHERE JOB='MANAGER' GROUP BY DEPTNO;
+
+  COUNT(*)     DEPTNO
+---------- ----------
+         1         30
+         1         20
+         1         10
+
+Q)WAQTD THE MAX SAL OF EACH JOB?
+
+SQL> SELECT COUNT(*),MAX(SAL) FROM EMP GROUP BY JOB;
+
+  COUNT(*)   MAX(SAL)
+---------- ----------
+         4       1300
+         4       1600
+         1       5000
+         3       2975
+         2       3000
+
+NEXT CLASS HAVING CLAUSE.

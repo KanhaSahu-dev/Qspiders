@@ -1,0 +1,7 @@
+127.0.0.1 - - [28/May/2024:07:23:56 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/May/2024:07:23:57 +0530] "GET /Task8_class39/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/May/2024:07:23:57 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [28/May/2024:07:24:08 +0530] "GET /Task8_class39/first?email=kanhasahu273273%40gmail.com&password=K%40123 HTTP/1.1" 200 450
+0:0:0:0:0:0:0:1 - - [28/May/2024:07:24:51 +0530] "GET /Task8_class39/first?email=kanhasahu273273%40gmail.com&password=K%40123 HTTP/1.1" 200 454
+0:0:0:0:0:0:0:1 - - [28/May/2024:07:25:09 +0530] "GET /Task8_class39/first?email=kanhasahu273273%40gmail.com&password=K%40123 HTTP/1.1" 200 466
+0:0:0:0:0:0:0:1 - - [28/May/2024:07:25:25 +0530] "GET /Task8_class39/register.html HTTP/1.1" 304 -

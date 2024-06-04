@@ -1,0 +1,50 @@
+form label{
+    font-weight: bold;
+    margin-left: 20px;
+}
+from input{
+    padding:50px;
+}
+
+form{
+    background-image: linear-gradient(rgb(221, 221, 255),rgb(255, 255, 210));
+    /* border:2px solid black; */
+    /* height:30em; */
+    /* border-radius: 60px; */
+    margin:0 auto;
+}
+
+#student{
+    margin-top:25px;
+    margin-bottom:-15px;
+}
+
+body{
+    background-image: linear-gradient(rgb(251, 207, 207),rgb(220, 253, 220));
+}
+
+textarea{
+    display: inline;
+    width:90%;
+}
+textarea input{
+    display: inline;
+}
+button{
+    position:relative;
+    left:50%;
+    display: block;
+    text-align:center;
+}
+#heading{
+    display: flex;
+    justify-content: center;
+}
+
+textarea{
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+
+#password{
+    font-family: 'Courier New', Courier, monospace;}

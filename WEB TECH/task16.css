@@ -1,0 +1,191 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: black;
+    color:white;
+    font-family: "Ubuntu", sans-serif;
+    
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+section{
+    border:3px solid white;
+    margin-bottom:10px;
+    padding:4px;
+    margin:10px;
+    border-radius:16px;
+    transition:2s;
+}
+
+section:hover{
+    border:3px solid yellow;
+}
+
+.red{
+    background-color: rgb(255, 8, 8);
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
+
+/* to select all the elements of the div container we can do by descendant selctor or child selector. */
+
+/* another way is to use attribute selector
+---------------------------------------- */
+/* ^= used for if we want value starts wid the specific word */
+
+/* = normal equals works */
+
+/* *= mainly used for applying to all the elements who starts has the specific word. */
+
+
+/* section 1 */
+
+div[class^="div"]{ 
+    border:3px solid rgb(255, 255, 255);
+}
+
+#heading{
+    color:white;
+    text-align:center;
+    margin:10px 0px;
+    text-shadow: 1px 2px 30px white;
+}
+
+.container{
+    color:white;
+    text-align:center;
+    font-weight: bold;
+    transition:1s;
+    padding:3px;
+}
+.container div{
+    border-radius:3px;
+    margin-bottom:5px;
+    padding:4px;
+}
+.div1{
+    color:rgb(255, 255, 255);
+}
+.div2{
+    color:white;
+}
+
+
+
+/* opacity 0 works and doesnt triggers the flickering effect. */
+
+.container:hover{
+    visibility: hidden;
+    /* opacity:0; */
+    /* The above property simply hides the element without changing the layout of the html. */
+
+    /* give some transitions */
+}
+
+
+/* section 2 */
+.paragraph{
+    /* visibility: hidden; */
+    opacity: 0;
+    padding:10px;
+    padding-bottom: 15px;
+    transition: 1.8s;
+    
+    font-family: "Pacifico", cursive;
+}
+.paragraph:hover{
+    /* visibility: visible; */
+    opacity: 1;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 30px rgb(255, 255, 255);
+    
+    background-image:linear-gradient(rgb(228, 228, 255),white,white,) ;
+}
+
+/* section 3 */
+.border_section{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+}
+.border{
+    height:20rem;
+    width:20rem;
+    border:4px solid rgb(255, 255, 255);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    /* content:"Now I am square , Hover me to become a circle"; */
+    color:white;
+    font-weight: bold;
+    font-size:15px;
+    transition: 1.5s;
+}
+.border:hover{
+    border-radius:50%;
+    background-color: aquamarine;
+    color:black;
+    font-weight: bold;
+    font-size:20px;
+    border:4px solid rgb(255, 13, 13);
+}
+
+.border::before {
+    content: "Hii! I am a Square!";
+    font-size:20px;
+}
+
+.border:hover::before {
+    content: "Hii! I am a Circle!";
+    font-size:20px;
+}
+
+/* section 4 */
+
+.fa-house{
+    color:red;
+}
+.fa-magnifying-glass{
+    color:aqua
+}
+.fa-user{
+    color:rgb(153, 80, 221)
+}
+.fa-twitter{
+    color:rgb(255, 255, 11)
+}
+.fa-image{
+    color:rgb(240, 24, 20)
+}
+.fa-instagram{
+    color:rgb(255, 255, 255);
+}
+
+i[class^="fa"]{
+    font-size:large;
+    margin:0px 35px;
+}
+
+.icon_section,.icons{
+    display: flex;
+    justify-content: center;
+}
+
+
+a{
+    opacity: 0;
+    transition:1s;
+}
+
+a:hover{
+    opacity: 1;
+}

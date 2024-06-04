@@ -1,0 +1,65 @@
+
+
+#heading{
+    text-align: center;
+}
+body{
+    background-color: rgb(255, 245, 247);
+}
+td{
+    width:40vh;
+    height:15vh;
+    font-weight: bold;
+}
+hr{
+    width:100%;
+}
+table{
+    text-align: center;
+}
+#first{
+    background-image: linear-gradient(yellow,rgb(206, 206, 255));
+}
+#second{
+    background-image: linear-gradient(pink, rgb(207, 207, 254));
+}
+#third{
+background-image: linear-gradient(rgb(194, 255, 194),rgb(252, 119, 119));
+}
+caption{
+    font-weight: 800;
+}
+
+#dii{
+    display:flex;
+    justify-content: center;
+}
+.ndiv{
+    display: flex;
+    justify-content: center;
+}
+.video{
+    display: block;
+}
+#movies{
+    text-align: center;
+}
+legend{
+    color:rgb(16, 0, 88);
+    text-decoration: dotted;
+    font-size: larger;
+}
+fieldset {
+    width: 100%;
+    background-image: linear-gradient(pink, rgb(206, 206, 253));
+    display:flex;
+    justify-content: center;
+}
+
+a{
+    font-style: italic;
+}
+
+.dec{
+    text-decoration: none;
+}

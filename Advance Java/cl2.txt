@@ -1,0 +1,15 @@
+Create , Read, Update, Delete.
+
+java.io
+file class
+non static methods
+Below all methods return boolean values
+	canRead();
+	canWrite();
+	createNewFile();
+	mkdir();
+	delete();
+	exists();
+Will return string[] type
+	list();
+	

@@ -1,0 +1,57 @@
+Servlets
+--------
+It is used for creating web applications.
+Collections of Programs.
+
+There are 2 types of applications:- 
+1.Stand alone applications.(These applications should be present inside the system.)
+2.Web-based Applications.
+
+Stand alone applications:-
+(Standalone applications are those applications which are run locally.)
+-Browser is not required.
+
+
+Web-based Applications
+-Browser is required.
+-Network is required.
+All web based applications accept http requests.
+
+Server is a machine which is used to deploy our applications which accepts requests,process the request and gives the response.
+
+Server is going to accept the request , he is going to process the request and get back some response.
+
+Apache tomcat is a server.
+
+Server uses
+------------
+It is going to maintain the data
+
+There are two types of server:-
+1.Web server - Web server is going to accept only http requests.
+2.Application server -  It can accept all types of requests.
+
+Network
+-------
+It is the connection of resources.
+
+Web-resources
+-------------
+Web resources present inside the web applications.
+
+Resources are of two types:-
+1.Static resources.
+2.Dynamic resources.
+
+Static resources
+-----------------
+-It is the same resources through out the Programs.
+-It is constant resource.
+
+Dynamic resources
+-It is the resource which can change through out the program (It may change)
+-Based on the request the content may change.
+
+There are two types of standalone web applications :-
+1.Static Web Application.(It contains all the static resources).
+2.Dynamic Web Application.(The web applications contains atleast 1 Dynamic resources.)(It may have many  static resources)

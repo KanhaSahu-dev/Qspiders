@@ -1,0 +1,45 @@
+Normally in an actual project we have many java class files so we need to run the jar files not the class files there the need of the jar files .
+
+Interface is a blue print of the class .
+API
+---
+It is a medium of communication between two different applications.
+It is also called as Application Programming Interface.
+The communication must be in a loosely coupled manner.
+
+Inheritance is tightly coupled. Any one change will affect the other.
+Interface is loosely coupled. Changes will not affect the other.
+
+Example:-
+   interface a1
+    |       |
+parent    child
+
+Any changes in the parent will not affect the child.But changes made to the interface a1 will affect both parent and child.
+
+has a relation used in multithreading , java 8 features , aggregation .
+
+In java the creation of api are basically the jar files.
+API will be in the form of jar files.
+
+java gives to jdbc api then api communicate between java and sql.
+
+JDBC is an api.
+
+Forms of API
+------------
+1.first form of API :- It is bulk in size.As implementation logic is inside the API.It is a disadvantage of the first form.
+
+To solve this disadvantage we can introduce a type of translator which will translate then we can directly store the logic inside the API no need for the translator logic.
+
+Technically translator is called as drivers.
+
+e.g., java applications -> API -> Drivers -> (MongoDB,PostgreSQL,mysql)
+
+Generally the idea is each and every languages in the database has to bring one driver to translate their logic before giving to the api. 
+
+For communication purposes for a language to the database we atleast need 2 things which are API,DRIVERS.
+
+All the Drivers are given in the form of JAR files.
+
+

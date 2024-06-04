@@ -1,0 +1,47 @@
+If we use transient keyword the data is not going to be stored.
+
+Inter Thread Communication
+
+Life Cycle Thread.
+
+New 
+Active
+Blocked
+wait Stage/timed
+terminated.
+
+Creating thread by implementing Runnable Thread
+------------------------------------------------
+Functional interface
+---------------------
+The interface which contains only one abstract method.
+
+Marker interface
+----------------
+An empty interface is known as marker interface.
+
+public void run(){
+    for(int i=1;i<=10;i++){
+        System.out.println(2+"X"+i+" = " +(2*i));
+    }
+}
+
+Implement Runnable interface
+------------------------------
+Create a class implementing Runnable
+Write the task
+Create an obj Runnable
+Pass the obj ref to Thread Constructor
+Call start method using the Thread obj.
+
+JAVA 8 FEATURES
+----------------
+Default & Static Concrete methods are allowed.
+functional interface 
+Lambda Expressions
+Method Reference.
+Stream API
+Date & Time API
+forEach
+localDate
+localTime

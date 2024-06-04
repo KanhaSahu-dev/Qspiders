@@ -1,0 +1,179 @@
+Alias
+-----
+It is used to provide the alternative name of a given column.
+We can achieve alias with or without using AS keyword
+
+SQL> SELECT SAL*12 "ANNUAL SAL" FROM EMP;
+
+ANNUAL SAL
+----------
+      9600
+     19200
+     15000
+     35700
+     15000
+     34200
+     29400
+     36000
+     60000
+     18000
+     13200
+
+ANNUAL SAL
+----------
+     11400
+     36000
+     15600
+
+14 rows selected.
+
+We can write double quote sometimes and we dont want to give double quote it is correct.
+
+We can not give double quotes when we are using only one word as the alias.
+
+e.g.,
+SQL> SELECT SAL*12 AS ANNUAL FROM EMP;
+
+    ANNUAL
+----------
+      9600
+     19200
+     15000
+     35700
+     15000
+     34200
+     29400
+     36000
+     60000
+     18000
+     13200
+
+    ANNUAL
+----------
+     11400
+     36000
+     15600
+
+If we want to give space then we need to give within the double quote.
+
+Single quote is not allowed in case of giving the alias name.
+
+SQL> SELECT SAL*12 as 'ANNUAL' FROM EMP;
+SELECT SAL*12 as 'ANNUAL' FROM EMP
+                 *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+If we want to change our column name to other name by using alias we cant change that.
+
+Functions
+---------
+The functions in sql is used to perform some operations.
+
+There are 2 types of functions:-
+1.Single row functions.-
+2.Multi row functions.
+
+Length() function
+----------------
+It is used to count the number of characters present in a given string.
+SQL> SELECT LENGTH('SUBHRAJIT') FROM DUAL;
+
+LENGTH('SUBHRAJIT')
+-------------------
+9
+
+SELECTING EACH NAME'S LENGTH
+
+SQL> SELECT LENGTH(ENAME) FROM EMP
+  2  WHERE DEPTNO=10;
+
+LENGTH(ENAME)
+-------------
+            5
+            4
+            6
+
+Upper() 
+----------------
+It is used to convert a given string into fully uppercase character 
+
+
+SQL> select upper('qspider') from dual;
+
+UPPER('
+-------
+QSPIDER
+
+lower()
+-------
+It is used to convert a given string into lower case character
+
+INITCAP()
+---------
+It is used to convert a string into initial uppercase character 
+
+SQL> SELECT INITCAP('hello') from dual;
+
+INITC
+-----
+Hello
+
+reverse() 
+---------
+It is used to reverse a string 
+
+SUBSTR()
+---------
+It is used to retrieve the substring of a given string 
+
+substr('org-str' , 'p1', 'p2')
+substr('QSPIDER',2,3);
+
+SQL> SELECT SUBSTR('HELLO',2,3) FROM DUAL;
+
+SUB
+---
+ELL
+
+|Q|S|P|I|D|E|R|
+
+SQL> SELECT SUBSTR('QSPIDER',0,5) FROM DUAL;
+
+SUBST
+-----
+QSPID
+
+REVERSE ORDER NOT POSSIBLE
+------------------------------
+
+SQL> SELECT SUBSTR('QSPIDER',-5,3) FROM DUAL;
+
+SUB
+---
+PID
+
+If we give A NEGATIVE length upto how much it should go then it will simply return blank space.
+
+SQL> SELECT SUBSTR('QSPIDER',-5,-3) FROM DUAL;
+
+S
+-
+
+If we dont give the second argument in the substr then it will run upto the end
+
+SQL> select substr('qspider',4) from dual;
+
+SUBS
+----
+ider
+
+
+
+
+
+
+
+
+

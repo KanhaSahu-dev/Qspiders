@@ -1,0 +1,22 @@
+Generic Servlet
+It is an abstract method.
+Here all the methods are added (init,destroy,etc) except service method. It will override the methods.
+Advantage
+	Code reduction
+	We don’t use setContentType as it is by default there
+Disadvantage
+	Whenever we are using the first statement as string type without html tag then it will take all the elements as text format, So it is recommended to use the setContent() depending upon the requirements.
+	Internal server error, when we get that then it means there is something wrong with our code.
+
+Importance of welcome-file-list
+By default the container will search for the index.html, index.htm and index.jsp.
+Priority: index.html-index.htmindex.jsp 
+If we don’t mention welcome-file then if we having pages rather than index then it will search and when it doesn’t found that particular file then it will show 404 not found error.
+To overcome that in welcome-file we have to customize the file-list depending upon our requirements but the page needs to be matched with the actual file.
+The file list will search upon top-bottom order.
+
+Example- <welcome-file>home.html</welcome-file>
+To add dynamic id
+We have open mysql workbench then make a column named as id and then choose the data type and then add AI(auto increment) which will add id’s dynamically.
+If it shows the port number is already in use then change the port number to run the program
+Task- if the user enter a particular name then search it, after the search show all the details of the user.

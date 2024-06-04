@@ -1,0 +1,54 @@
+src/main/java contains all the .java files.
+
+In the build folder .class files will be stored after the .java files compiled.
+
+webapp folder contains all the front end part.
+
+META-INF folder contains the hybernate files.
+
+WEB-INF folder contains the configuration files.
+
+IN web.xml the flow is down to top.
+
+servlet tag is the servlet configuration.
+
+Always the request given to the service method is going to be called.
+
+Here anything starts it is going to start from the service method itself.
+
+In the url-pattern giving '/' is mandatory as not giving will stop the server.
+
+Methods of the Servlet Interface:-
+init
+service
+destroy
+getServletInfo
+getServletConfig
+
+
+init method works only one time .
+service method :- accept the request, process the request, response.
+Service method can be called n number of times.
+destroy will be called by the containers before terminating the server.
+
+
+Create a new project Servlet_assignment1 
+In the console
+click here to view java.
+Click here to view html and css.
+Click here to view Servlet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+Servlet Life Cycle
+------------------
+These steps occur one by one in order.
+1.Instantiation
+---------------
+Container inside the server creates an object of the servlet class.These things occurs internally.
+
+
+
+2.Initiallisation 
+-----------------
+Once initialsize then only it will call 'init' method.
+Initiallisation is done as when the new object is being assigned to an object reference of that servlet class.
+
+During the Class loading process static block executes.
+Similarly non static block is executed at the time of Ojbect loading.
+Object loading is done first then initialisation with the constructor is done.
+
+
+3.Service Phase (It is a type of main method of the servlet called)
+-------------------------------------------------------------------
+Here it Accepts, requests,Processing, Sending
+
+4.Destroy Phase 
+---------------
+The destroy() method will be called before the termination of the server not the console.
+It acts like a finalize() method whatever the objects created by the Container to destroy the abandoned objects of the Servlet class.
+We can also write the costly resources here.
+
+
+Whenever reloading the previous objects are destoryed then again everything is started.
+
+One time only class loading , instantiation, initialisation methods happens but service method happens many times.
+
+
+***IMPORTANT***
+The INIT method, SERVICE method, DESTROY method together called as "Life Cycle Methods".
+

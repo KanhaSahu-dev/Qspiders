@@ -1,0 +1,237 @@
+<!-- Improved Code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Homepage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 100px;
+            overflow-x: hidden; /* prevent horizontal scrollbar */
+        }
+
+        /* Header Styles */
+        h1 {
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #666;
+        }
+
+        /* Animation Styles */
+        .animate {
+            opacity: 0;
+        }
+
+        .animate.fadeInDown {
+            animation: fadeInDown 1s ease-in-out forwards;
+        }
+
+        .animate.fadeInUp {
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        body{
+        	background-color:black;
+        	color:white;
+        }
+        
+        
+        body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  height:100vh;
+  background-color: #15616d;
+}
+
+.diamond-container {
+	margin-top:15%;
+	margin-left:5%;
+  position: relative;
+}
+
+.diamond {
+  position: relative;
+  left:-100px;
+  top:-50px;
+  filter: drop-shadow(0 0 100px white);
+}
+
+.diamond-top {
+  position: relative;
+}
+
+.diamond-top:before, .diamond-top:after {
+  content:"";
+  position: absolute;
+  width:0;
+  height:0;
+  border-style: solid;
+  top:0;
+}
+
+.diamond-top:before {
+  border-color: transparent transparent #b4e3e6 transparent;
+  border-width: 0 25px 30px 25px;
+  filter: drop-shadow(50px 0 #94d7d9) drop-shadow(50px 0 #b4e3e6);
+}
+
+.diamond-top:after {
+  border-color: #d8f8f9 transparent transparent transparent;
+  border-width: 30px 25px 0 25px;
+  left:25px;
+  filter: drop-shadow(50px 0 #d8f8f9);
+}
+
+.diamond-bottom, .diamond-bottom:before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.diamond-bottom {
+  left: 0;
+  top: 30px;
+  border-color: #70ced4 transparent transparent transparent;
+  border-width: 100px 75px 0 75px;  
+}
+
+.diamond-bottom:before {
+  content:"";
+  border-color: #b4e3e6 transparent transparent transparent;
+  border-width: 100px 25px 0 25px;  
+  top:-100px;
+  left:-25px;
+}
+
+.diamond-bottom:after {
+  content:"";
+  position: absolute;
+  border-radius:50%;
+  width: 100px;
+  height:10px;
+  background-color: #b4e3e6;
+  top:-135px;
+  left:-50px;
+}
+
+.sparkles {
+  z-index:2;
+  position: absolute;
+}
+
+.one {
+  position:absolute;
+  font-size:40px;
+  color: transparent;
+  text-shadow: 0 0 white, -115px -75px white;
+  animation: shine .5s linear infinite;
+}
+
+.two {
+  position: absolute;
+  color: transparent;
+  font-size: 25px;
+  left:-65px;
+  top:45px;
+  text-shadow: 0 0 white, 55px -115px white;
+  animation: shine .5s linear infinite .25s;
+}
+
+@keyframes shine {
+  from {opacity:1;}
+  to {opacity:0;}
+}
+        
+    .main_div{
+    margin-top:-15%;
+    
+    }    
+    </style>
+</head>
+<body>
+    <!-- GSAP Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+        gsap.from('h1', { duration: 1, y: -20, opacity: 0, ease: 'power2.inOut' });
+        gsap.from('.btn', { duration: 1, y: 20, opacity: 0, ease: 'power2.inOut', stagger: 0.2 });
+    </script>
+
+    <!-- HTML Content -->
+    
+    <div class="main_div">
+    
+    <h1 class="animate fadeInDown" style="color:white; font-weight:bold;">Welcome to Homepage!</h1>
+    <a href="java" class="btn animate fadeInUp" font-weight:bold;>Click here to view JAVA</a>
+    <a href="html_css" class="btn animate fadeInUp font-weight:bold;">Click here to view HTML and CSS</a>
+    <a href="servlet" class="btn animate fadeInUp font-weight:bold;">Click here to view Servlet</a>
+ 
+    </div>
+    
+       
+    <div class="diamond-container">
+<div class="diamond">
+  <div class="diamond-top"></div>
+  <div class="diamond-bottom"></div>
+</div>
+  <div class="sparkles">
+    <div class="one">✨</div>
+    <div class="two">✨</div>
+  </div>
+</div>
+</body>
+</html>

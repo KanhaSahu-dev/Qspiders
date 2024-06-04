@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar Example</title>
+    <style>
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .nav-item {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            background-color: #555;
+        }
+
+        .input-form {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            padding: 20px;
+            top: 0px;
+            left: 0;
+            width: 200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-item:hover .input-form {
+            display: block;
+        }
+
+        .input-form input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-item">
+            Hover Me
+            <div class="input-form">
+                <label for="changeText">Change Text:</label>
+                <input type="text" id="changeText" placeholder="Type here">
+            </div>
+        </div>
+        <div class="nav-item">Menu 1</div>
+        <div class="nav-item">Menu 2</div>
+        <!-- Add more menu items as needed -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+Any database can be used and be done in the 5 steps.
+
+When we use new keyword tightcoupling is happening.This is the disadvantage.
+
+create a driver object and register using registerDriver()
+
+forName()
+-----------
+forName() is a method present in a class "Class" . It is a static name which is accepting a fully qualified name(A name which has package name & class name).
+
+e.g.,
+Class.forName("com.mysql.cj.jdbc.Driver");  ---> Loading is done in only  one liner using the forName.
+
+Since if we change the database we have to write the fully qualified name for that also so we can ask the use to give the fully qualifed name of the driver. by using Scanner class.
+
+When we use the new keyword tight coupling happens therefore we use forName() method .
+
+Establishing a java application to the database
+===============================================
+getConnection is present in the DriverManager class. 
+DriverManager is a helper class.
+It is a static method.Once the connection is established then it returns a Connection Interface Object.
+
+
+getConnection(url)
+
+getConnection(url,userName,pasword)
+
+getConnection(url,properties)
+
+URL
+====
+URI=Uniform resource Identifier.(It identifies resource(data)).Identify the data in a structural way.
+
+Identification of the resource is done in two ways:-
+1: URN :- Uniorm Resource name
+2: URL :- Uniform Resource Locator.
+
+url path example:- jdbc:mysql://localhost:3306?user=root&password=root

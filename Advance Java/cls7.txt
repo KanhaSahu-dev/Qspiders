@@ -1,0 +1,11 @@
+Incosistent Data.
+If we try to access same object then we wil get Incosistent Data.
+
+When more than one thread trying to access the same object there the problem of priority happens to solve this we have synchronisation where we allow each thread can only access one object at a time and locks that object untill the task is over then another thread is allowed.
+
+Synchronised method 
+Synchronised blocks
+static Synchronised
+
+non static method - Object Level locks.
+static method - Class level locks.

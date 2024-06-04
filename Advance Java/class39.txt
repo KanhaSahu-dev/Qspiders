@@ -1,0 +1,22 @@
+RequestDispatcher
+------------------
+It is passing the resource to another class . Here passing means copy pasting the resource where the resource is available to both of the classes not just one.
+
+RequestDispatcher not only dispatches the request it also includes the responses of other resources.Here the second response will be included in the first response then send to the client.
+
+forward ,include method  both method are used to dispatch the request.
+
+We have getRequestDispatcher inside the ServletRequest.
+
+forward()
+---------
+When we use forward method the response of the servlet 1 response will be ignored.
+Basically we are ignoring the response of the servlet1 response.
+
+includes()
+-----------
+When we dispatch our request from our servlet1 class to servlet2 class the response given by the servlet2 will be included in the servlet1 response when returning to the client.
+
+In the getRequestDispatcher we have to pass the link name same as the url pattern .
+
+The order when we use includes method is second response then first.

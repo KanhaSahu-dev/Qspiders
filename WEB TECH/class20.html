@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item1 {
+            background-color: rgb(255, 222, 222);
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: 1;
+            overflow-x: scroll;
+
+            /* Apply scrollbar styles directly to .item1 */
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: red #f1f1f1; /* For Firefox */
+
+            /* For WebKit browsers (Chrome, Safari) */
+            ::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: red;
+            }
+
+            ::-webkit-scrollbar-track {
+                background-color: #f1f1f1;
+            }
+        }
+
+        .item2 {
+            background-color: rgb(184, 241, 255);
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="item1">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ut laborum, dolorem voluptate beatae nihil placeat, dolores quidem recusandae earum eius vero iure esse tempora rem harum totam facere! Obcaecati quidem illum harum saepe ratione, ab culpa laborum illo quo? Aspernatur, est consectetur distinctio corrupti quia vero doloremque explicabo possimus.
+        </p>
+    </div>
+    <div class="item2"></div>
+</body>
+</html>
+<!-- position property is mandatory when using z index -->
+<!-- z index will not work when using position static and inherit. -->
+<!-- when the z indexes are same then the element order or the normal order follows. -->
+<!-- how to change the color of a scroll bar -->
+<!-- % is a dynamically changed element -->
+<!-- if we mention % then parent height is mandatory -->
+<!-- when we want to center something in the body then just give the height and width then only we can do anything -->
+

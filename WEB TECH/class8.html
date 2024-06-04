@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles8.css">
+</head>
+
+<body>
+    <h1 id="heading"><u>Student Form</u></h1>
+
+    <form>
+        <fieldset>
+            
+            <legend>Form</legend>
+            <div id="student">
+                <label for="sname">
+                    Student's Name:
+                </label><input placeholder="Enter here" type="text" id="sname" required>
+            </div>
+            <br><br>
+            <label for="fname">
+                Father's Name:
+            </label><input placeholder="Enter here" type="text" id="fname"><br><br>
+            <label for="age">
+                Age:
+            </label>
+            <input placeholder="Enter here" type="number" id="age">
+            <label for="dob">
+                DOB:
+            </label>
+            <input placeholder="Enter here" type="date" id="dob"><br><br>
+            <label for="gender">
+                Gender:
+            </label>
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label>
+            <input type="radio" id="others" name="gender">
+            <label for="others">Others</label>
+            <br><br>
+            <label for="email">Email: </label>
+            <input placeholder="Enter here" type="email" id="email"><br><br>
+    
+            <label for="skills">Skills: </label>
+            <input type="checkbox" id="html" checked>
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="java">
+            <label for="java">JAVA</label>
+            <input type="checkbox" id="javascript">
+            <label for="javascript">JavaScript</label><br><br>
+            <label for="address">Address:- </label>
+            <textarea name="address" id="address" cols="155" rows="10"></textarea><br><br>
+            <label for="courses">Courses: </label>
+            <select name="course" id="course">
+                <option value="">React</option>
+                <option value="">Java</option>
+                <option value="">Javascript</option>
+                <option value="">HTML</option>
+                <option value="">CSS</option>
+            </select><br>
+            <input type="file">
+            <input type="datetime-local">
+            <input type="time">
+            <input type="url"><br>pattern
+            <input type="pattern">
+            <input type="week">
+            <input type="month"><br>password: 
+            <input type="password" id="pasword">
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,91 @@
+// The power of Lambda Function
+
+interface I1{
+    void m1();
+}
+
+class child implements I1{
+    @Override
+    public void m1(){
+
+        System.out.println("Hii");
+    }
+}
+
+public class FI{
+    public static void main(String[] args){
+        I1 obj = new child();
+        obj.m1();
+        I1 obj2 = ()->{
+            System.out.println("Hello");
+        };
+        obj2.m1();
+    }
+}
+
+
+In lamda functions we dont need to provide any thing just the arguments is all i need to define the lambda functions.
+
+interface square{
+    public int area(int side);
+}
+class Child implements square {
+    @Override
+    public int area(int side){
+        return side*side;
+    }
+}
+
+public class FI3{
+    public static void main(String[] args) {
+        Child sq = new Child();
+        System.out.println(sq.area(2));
+
+        square o = (int s)->{
+            return s*s;
+        };
+
+        square o1 = s->s*s;
+
+        System.out.println(o1.area(2));
+    }
+}
+
+How to make a class generic?mandatory.
+
+If we dont mention anything is the object creation it will take everything as the object type.
+Left side generic style is mandatory.
+We can also mention generic type in the return type.
+
+import java.util.List;
+import java.util.Map;
+
+
+public class FI4<T,R> {
+    public void add(T a){
+        System.out.println(a);
+    }
+    public void put(T t,R r){
+        System.out.println(t);
+        System.out.println(r);
+    }
+    public static void main(String[] args) {
+        Demo1<Double> d1 = new Demo();
+        Map<String,Integer> map = new HashMap<>();
+        map.put("maths",1000);
+
+        Demo1<Integer,String> d2 = new Demo1<>();
+        d1.put(1000,"science");
+    }
+}
+
+import java.util.function.Predicate;
+
+public class FI4{
+    public static void main(String[] args) {
+        Predicate<Integer> obj = n->n%2==0;
+        System.out.println(obj.test(50));
+    }
+}
+
+Q) You have to give the implementation of the different types of interfaces using lambda expressions? anad check out by passing values to the array.

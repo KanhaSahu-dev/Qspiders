@@ -1,0 +1,108 @@
+Special Operator 
+-----------------
+1)in operator
+It is the multi valued operator which can accept multiple values at RHS 
+select * from emp where deptno in (10,20);
+Q)waqtd the name and job of the employees working as clerk or salesman?
+
+2)not in operator
+It is opposite of in operator
+
+Q)waqtd the name and deptno of the employees those are not working in deptno 20 and 30?
+
+3)between operator
+It is used to select the values in a given range.
+
+
+Q)waqtd the name and hire date of the employees those are hired in the year of 1981?* 
+SQL> select ename,hiredate from emp where hiredate between '01-JAN-1981' AND '31-DEC-1981';
+
+ENAME      HIREDATE
+---------- ---------
+ALLEN      20-FEB-81
+WARD       22-FEB-81
+JONES      02-APR-81
+MARTIN     28-SEP-81
+BLAKE      01-MAY-81
+CLARK      09-JUN-81
+KING       17-NOV-81
+TURNER     08-SEP-81
+JAMES      03-DEC-81
+FORD       03-DEC-81
+
+10 rows selected.
+
+Q)waqtd the details of the employees those are hired in the month of april and earning more that 2500?
+
+not between 
+------------
+Opposite of between operator 
+
+waqtd the name and hiredate of the employees those are hired after 1981 and before 1983?
+
+Q)waqtd the name of the employees along wid annual salary working as clerk and manager in deptno 10 or 30 and annual salary is greater than 22000?
+
+SQL> select ename,sal*12 from emp where job in ('CLERK','MANAGER') AND DEPTNO IN (10,30) AND SAL*12>
+22000;
+
+ENAME          SAL*12
+---------- ----------
+BLAKE           34200
+CLARK           29400
+
+Q)WAQTD the details of the employees along with their annual salary ?
+
+SQL> select emp.*,sal*12 as "annual_salary" from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO annual_salary
+---------- ---------- --------- ---------- --------- ---------- ---------- ---------- -------------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20          9600
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30         19200
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30         15000
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20         35700
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30         15000
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30         34200
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10         29400
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20         36000
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10         60000
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30         18000
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20         13200
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30         11400
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20         36000
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10         15600
+
+14 rows selected.
+
+IS
+--
+It is used to compare the null values .
+
+Q)waqtd the details of the employees those are not getting commision ?
+
+SQL> select * from emp where comm is null;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+IS NOT
+------
+Q) waqtd those are getting commission?
+
+SQL> select * from emp where comm is not null;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30

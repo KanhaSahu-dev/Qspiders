@@ -1,0 +1,13 @@
+When the get*** method is used Remember always the table is copied exactly as in the mysql workbench this is the reason why we can easily get the particular element.
+
+In case of execute() method if the query the is dql then internally a ResultSet object is created and to fetch we have a method called getResultSet() method it returns a ResultSet object.
+
+getResultSet method is present in the Statement interface class.
+
+execute() returns true or false based on whether the ResultSet object is created or not.
+
+The main difference is that executeQuery directly 
+
+Print the employee details those having age greater than 20 less than 30.
+print the employees details those having the salary is less than 1000.
+print the employees details based on the id.

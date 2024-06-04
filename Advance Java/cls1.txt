@@ -1,0 +1,11 @@
+file handling
+multi threading
+java 8 features
+functional interface
+lambda expression
+stream api
+JDBC
+Architecture of Software Development
+-------------------------------------
+
+

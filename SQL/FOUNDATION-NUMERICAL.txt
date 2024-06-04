@@ -1,0 +1,14 @@
+MAX QUESTIONS
+HCF,LCM, Divisibilty Remainders, Geometry based on 2D, 3D
+
+Features
+
+Formula Based
+
+Percentages, SI and CI,Ratios, Profit and loss, Time and work Time and distance, Allegation, Avergaes, etc.
+
+Mean, Median, Mode, Mean Deviation Variance Standard deviation
+
+Pie chart, Tabular DI, Graph DI
+
+Calculations, Rational and Irrational Numbers simplification

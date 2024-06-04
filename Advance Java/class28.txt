@@ -1,0 +1,85 @@
+Closing the Connection
+----------------------
+Connection is a costly resource.
+Costly resource means a resource which has some memory e.g.,Scanner,Connection,Statement.
+
+All the costly resources implemented a interface called Closeable.
+
+Once we close a costly resource next time we cant use inside the entire main program as it is stored in the heap area.So the memory has been closed permanently.
+
+As it closes everything in the program thus it is recommended to close the resource once the job is done.
+
+When we want to use any object one time just dont give it any reference.
+
+It becomes an abandoned object.
+
+Quick revision what is the difference final , finally, finalize.
+finalize() method executes before removing the abandoned object.
+
+Whatever opened last should be closed first.
+
+The need of using the finally block in case of closing the costly resources.
+
+In case if there are any exceptions inside then the program will be interrupted midway and the connection is not closed or resource leak happens so we have to write the close() thing inside a finally block so no matter what exceptions we can execute the finally block and close the connection .
+
+Always check whether the ResultSet is closed or not then we will close the costly resource.
+
+In jdk 7 try with resouces has been introduced.
+----------------------------------------------- 
+
+With try with introduce costly resources here automatic closing of resources happens.
+Here automatic closing happens so when a exception happens it will close the connection and it closes.
+
+For example if we closed the scanner in the try with resources then we cant use anywhere else.
+
+try with resource is not recommended because it auto closes so we cant handle it manually if there any exception occurs it handles if next tym i want to use then we cant use it again.
+
+
+Example of try with resources
+
+package class28;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Class28_2 {
+	public static void main(String[] args) {
+		
+		
+		//Try with resources.
+		
+		//Adding the costly resources inside the paranthesis of the try block.
+		try 
+		(
+			Connection	con = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_first_jdbc","root","root");
+				
+			PreparedStatement	 pst = con.prepareStatement("select * from emp");
+				
+			ResultSet	 rst = pst.executeQuery();	
+		)
+		
+		{
+			
+			
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			 
+			 while(rst.next()) {
+					System.out.print(rst.getInt("id"));
+					System.out.print("  ");
+					System.out.print(rst.getString("name"));
+					System.out.print("  ");
+					System.out.print(rst.getInt("age"));
+					System.out.print("   ");
+					System.out.print(rst.getLong("salary"));
+					System.out.println();
+				}
+			
+		}catch(ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

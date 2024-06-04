@@ -1,0 +1,26 @@
+PreparedStatement is a child interface of Statement interface.
+
+prepareStatement() From this method we can create a statement/platform.
+
+If execute() method has a query it will not check whatever query inside the prepareStatement() query.
+
+If it doesnt has any query then it will execute the query present in the prepareStatement.
+
+while creating the prepareStatement the compilation is automatically done.
+
+in createStatemet while executing compilation is done.
+
+To solve the concatenation problem 
+----------------------------------
+To solve this issue we have placeholder to reserves a place for the data.
+In java JDBC ? is the symbol which means it's placeholder.
+
+In preparedStatement there is a method called set*** . It is used to the datatype.
+
+Syntax :- set***(placeholderno,***);
+
+1 ? - first placeholder
+2 ? - second placeholder
+3 ? - third placeholder
+
+

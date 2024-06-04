@@ -1,0 +1,72 @@
+replace()
+--------
+It is used to replace a part of a string into another string 
+SYNTAX
+========
+REPLACE('HELLO','STR1','STR2');
+
+SQL> SELECT REPLACE('QSPIDER','Q','J') FROM DUAL;
+
+REPLACE
+-------
+JSPIDER
+
+We can change multiple characters.
+SQL> SELECT REPLACE('QSPI','S','TYY') FROM DUAL;
+
+REPLAC
+------
+QTYYPI
+
+When we dont give the 3rd argument then the particular character gets deleted.
+
+Q)waqtd the no. of times 'a' present in banana?
+SQL> SELECT LENGTH('BANANA')-LENGTH(REPLACE('BANANA','A')) FROM DUAL;
+
+LENGTH('BANANA')-LENGTH(REPLACE('BANANA','A'))
+----------------------------------------------
+                                             3
+
+
+mod() is the remainder
+----------------------
+SELECT MOD(20,10) FROM DUAL;
+
+
+ROUND() (ROUND THE VALUES)
+---------
+SELECT ROUND(5.6) FROM DUAL;
+ROUND(5.6)
+----------
+         6
+
+TRUNC() 
+---------
+It is similar to the round function but it is always round off the given number into the lower value.
+
+select trunc(4.8) from dual;
+
+TRUNC(4.8)
+----------
+         4
+
+Waqtd todays date by using sql?
+SELECT SYSDATE FROM DUAL;
+SYSDATE
+---------
+05-APR-24
+
+SELECT CURRENT_DATE FROM DUAL;
+
+CURRENT_D
+---------
+05-APR-24
+
+Q)waqtd the date and time zone?
+SELECT SYSTIMESTAMP FROM DUAL;
+
+Q)WAQTD THE LAST DATE OF A GIVEN MONTH?
+SELECT LAST_DAY(SYSDATE) FROM DUAL;
+
+Q)WAQTD THE FIRST HALF OF ANY NAME?
+SELECT ENAME FROM EMP WHERE SUBSTR(ENAME,1,LENGTH(ENAME)/2);

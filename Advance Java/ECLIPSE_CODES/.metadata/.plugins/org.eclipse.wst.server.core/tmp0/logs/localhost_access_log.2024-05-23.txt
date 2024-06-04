@@ -1,0 +1,4 @@
+127.0.0.1 - - [23/May/2024:12:58:27 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [23/May/2024:12:58:29 +0530] "GET /Home_practice/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [23/May/2024:12:58:30 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [23/May/2024:12:58:41 +0530] "GET /Home_practice/click?name=Tushar&email=priyadarshannayak038%40gmail.com&password=1345 HTTP/1.1" 200 34

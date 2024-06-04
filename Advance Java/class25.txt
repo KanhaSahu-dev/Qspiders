@@ -1,0 +1,23 @@
+Execution of Queries are of three types:-
+
+execute(), executeUpdate(), executeQuery()
+
+The difference between these three is return types.
+
+execute() return type is boolean.
+
+exeuteUpdate() return type is int.
+
+executeQuery() return type is ResultSet().
+
+
+execute()
+---------
+It will return true if it is a DQL query.
+It will return false if it is not a DQL query.
+Here it not say how many rows got affected.
+
+executeUpdate()
+---------------
+It will return the integer which will say how many rows got affected.
+Mainly used if it is a DML query.

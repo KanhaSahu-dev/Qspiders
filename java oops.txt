@@ -1,0 +1,18 @@
+Oops stands for object oriented programming structure.
+
+What is class?
+Class is a template using which we can create the object .
+Class is a collection of objects which will share common properties 
+Class is an imaginary boundary where we will define it's behaviour .
+
+Methods
+--------
+
+Methods are the blocks of code where we will write buisness logics or application logic.
+Methods are the behaviours of a class .
+Methods are the block which will perform specified task .
+
+*There are 2 parts of a method.
+1.Declaration .
+2.Body of the method or implementation.
+

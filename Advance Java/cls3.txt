@@ -1,0 +1,38 @@
+Stream
+------
+Sequence of data
+Input Stream                  Output Stream
+FileInputStream             FileOutputStream
+(Reading a file)              (Writing a file)
+
+In FileOutputStream paranthesis mentioning true means appending another string to the same file while not replacing it.
+
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+    public static void main(String[] args) {
+class cls3{
+        File file = new File("D:\\QSPIDERS\\Advance Java\\codes\\DOREAMON");
+        try{
+            file.createNewFile();
+            FileOutputStream fos = new FileOutputStream(file);
+            String x = "hello boy";
+            byte[] b = x.getBytes();
+            fos.write(b);
+            fos.close();
+        }catch(IOException e){
+
+        }
+    }
+}
+
+
+Dont use throws as the remaining code will not be executed so we use the try and catch block so that remaining code will be executed.
+
+FileOutputStream :- Write a file , if file is not there it creates and writes the file .
+
+FileInputStream :- Read a file, if file is not there it doesnt creates.
+
+Q) IN Encapsulation why we have to make the variables private?

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>h1{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>this is 1st h1</h1>
+        <h1>This is 2nd h1</h1>
+        <p>this is 1st p</p>
+        <p>
+            <h1>
+                This is 3rd h1
+            </h1>
+        </p>
+    </div>
+    <!-- <div>hello</div> -->
+    <h1>hello</h1>
+    <h1></h1>
+</body>
+</html>
+
+<!-- ~ all siblings  -->
+<!-- + first sibling -->
+<!--  -->
+<!-- div h2{ -->
+    <!-- it will select all h2 inside div -->
+<!-- } -->
+<!--  -->
+<!-- div > h2{ -->
+    <!-- it will select direct child   -->
+<!-- } -->
+<!--  -->
+<!-- div + h2{ -->
+    <!-- it will select the first sibling. -->
+<!-- } -->
+<!--  -->
+<!-- combinator selector. -->
+
+<!-- The issue here is that the HTML specification does not allow block-level elements, like <h1>, to be placed directly inside inline-level elements, like <p>. Therefore, the browser automatically closes the <p> tag before the nested <h1> and opens a new <p> tag after it. -->
+<!--  -->
+    <!-- To clarify, your HTML structure is effectively interpreted as follows: -->
+    <!--  -->
+    <!-- html -->
+    <!-- Copy code -->
+    <!-- <div> -->
+        <!-- <h1>this is 1st h1</h1> -->
+        <!-- <h1>This is 2nd h1</h1> -->
+        <p></p> Automatic closure of <p> before nested <h1>
+        <!-- <h1>This is 3rd h1</h1> -->
+        <p></p> Automatic opening of a new <p> after nested <h1>
+    <!-- </div> -->
+    <!-- This is why the third <h1> is still considered a direct child of the <div>, and the CSS selector div > h1 applies the green background to it. -->
+    <!--  -->
+    <!-- If you want to exclude <h1> elements inside <p> tags, you might need to reconsider your HTML structure or use JavaScript to apply styling based on specific criteria. Keep in mind that styling nested block-level elements inside inline-level elements can lead to unpredictable behavior due to how browsers interpret and adjust the HTML structure. -->

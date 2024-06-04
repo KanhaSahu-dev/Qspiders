@@ -1,0 +1,24 @@
+package pack;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class URL_class {
+
+	public static void main(String[] args) {
+		try {
+			URL url = new URL("https://ocsaly.com");
+			URLConnection myCon = url.openConnection();
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

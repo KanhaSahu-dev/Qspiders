@@ -1,0 +1,1 @@
+When multiple threads require each and others object then deadlock occurs.

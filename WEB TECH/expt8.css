@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 400px; /* Adjust the width as needed */
+  }
+  
+  .image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%; /* Set left to 50% to cover the right half of the image */
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Adjust the color and opacity as needed */
+    backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+    /* transform: translateX(-50%); Center the pseudo-element */
+  }
+  

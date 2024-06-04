@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+        <style>
+            /* p::before{
+                content:"😍";
+            }
+            p::after{
+                content:"💕";
+            }
+            p::selection{
+                background-color: pink;
+            }
+            p::first-letter {
+                color: green;
+            }
+            p::first-line{
+                background-color: yellow;
+            } */
+
+
+            a[target="_self"]{
+                background-color: yellow;
+            }
+
+            div[title~="flower"]{
+                background-color: green;
+                width:20px;
+                height:20px;
+            }
+        </style>
+    </style>
+</head>
+<body>
+    <a href="#">target none</a>
+    <a href="#" target="_self">target self</a>
+    <a href="#" target="_blank">target blank</a>
+
+    <div title="flower is so good">hello</div>
+</body>
+</html>
+<!-- first-line -->
+<!-- first-letter -->
+<!-- before -->
+<!-- after -->
+<!-- selection -->
+
+<!-- css attribute selector -->
+<!-- a[target="_self"]{
+    background-color:yellow;
+} -->
+
+<!-- title used to give extra tooltip to the element -->
+
+<!-- p[title~="flower"]{
+    background-color:yellow;
+} -->
+
+<!-- p[title^="top"]{  this will help to find the first word of the value  -->
+    <!-- background-color:yellow; -->
+<!-- } -->
+
+<!-- p[title$="top"]{  this will help to find if the word gets ended with the particular word.  -->
+    <!-- background-color:yellow; -->
+<!-- } -->
+
+<!-- p[title*="top"]{  this will help to find if the word has the particular word then it gets selected.  -->
+    <!-- background-color:yellow; -->
+<!-- } -->

@@ -1,0 +1,3 @@
+build path , configure build path , libraries, class path , add jars (internal) 
+build path , configure build path , libraries, class path , add external jars (internal) 
+

@@ -1,0 +1,43 @@
+If we want to retrieve the data from the database then we should go for dql there are 4 statements of dql 
+1:- SELECT 
+	If we want to retrieve the data and display it into the console then we have to use SELECT clause.
+2:- PROJECTION
+	It is used to retrieve the data from a given table by selecting only columns.
+3:- SELECTION
+	If we want to retrieve the data from a given table by selecting both columns and rows then we should go for 	selection .
+4:- JOIN
+	It is used to retrieve the data by using multiple table simultaneously 
+5:- FROM is used to go to the database.
+
+Q. WAQTD the name of the employees?
+A. SELECT ename FROM EMP;
+
+Q. How can we display the tables present in the database ?
+A. SELECT * FROM TAB;
+
+Q. WAQTD the details of the employees?
+A. SELECT * FROM EMP;
+
+Q. WAQTD the salary of the employees?
+A. SELECT SAL FROM EMP;
+
+Q. WAQTD the data of joining of the employees?
+A.SELECT HIREDATE FROM EMP;
+
+Q.WAQTD the name and salary of the employees?
+A.SELECT ENAME , SAL FROM EMP;
+
+SELECTION
+-----------
+Q.WAQTD the details of the employees working in dept no. 20?
+A.SELECT * FROM EMP WHERE DEPTNO=20;
+
+Q.WAQTD name , job & deptno of the empolyees working in dept no. 30?
+A. SELECT ENAME,JOB,DEPTNO FROM EMP WHERE DEPTNO=30;
+
+q.waqtd name,job & salary of the employees those are working as salesman?
+A. SELECT ENAME,JOB,SALARY FROM EMP WEHRE JOB='SALESMAN';
+
+Q. WAQTD the name and salary of the employees those are earning more than 1500?
+A. SELECT ENAME,SAL FROM EMP WHERE SAL>1500;
+

@@ -1,0 +1,7 @@
+PrintWriter mainly used to write the content on browser.
+
+In the ServletResponse class we have the method named getWriter() .
+getWriter() returns the object of the PrintWriter class.
+print and println are methods whcih are present in the PrintWriter .
+
+setContent type is used to set whether it is html or javascript file.

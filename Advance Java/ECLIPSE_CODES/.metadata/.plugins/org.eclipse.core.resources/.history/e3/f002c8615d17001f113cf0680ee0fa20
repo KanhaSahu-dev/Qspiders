@@ -1,0 +1,24 @@
+package com.org;
+
+public class expt {
+	
+	
+	public static void main(String[] args) {
+		A o = new A();
+		o.accept("hello", "hii");
+		o.prinn();
+	}
+
+}
+
+class A{
+	static String x ;
+	static String y ;
+	public void accept(String x,String y) {
+		A.x = x;
+		A.y = y;
+	}
+	public static void prinn() {
+		System.out.println(x+" "+y);
+	}
+}

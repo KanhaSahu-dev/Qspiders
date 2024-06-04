@@ -1,0 +1,89 @@
+Forms of API
+------------
+1.first form of API :- It is bulk in size.As implementation logic is inside the API.It is a disadvantage of the first form.
+
+To solve this disadvantage we can introduce a type of translator which will translate then we can directly store the logic inside the API no need for the translator logic.
+
+Technically translator is called as drivers.
+
+e.g., java applications -> API -> Drivers -> (MongoDB,PostgreSQL,mysql)
+
+Generally the idea is each and every languages in the database has to bring one driver to translate their logic before giving to the api. 
+
+For communication purposes for a language to the database we atleast need 2 things which are API,DRIVERS.
+
+All the Drivers are given in the form of JAR files.
+
+We have jdbc api for that we have jdbc driver.
+
+Driver contains the implementation of the jdbc 
+
+Types of JDBC Drivers
+-----------------
+Type 1:JDBC/ODBC Driver -> Universal Driver
+Type 2:Native API Driver
+Type 3:Network Protocol Driver
+Type 4:Thin Driver
+
+JDBC -> ODBC
+Whatever method calls are there are converted to the function calls.This is done by the JDBC driver.
+
+Type 1 - JDBC driver
+--------------------
+Type 1 is database independent driver.It can work with any type of database like mysql , mongodb.If multiple databases are accessed then there will be security problem.So whatever data is sending is not securely send.It can leak data to other databases also this it not secured.
+
+Type 1 or JDBC/ODBC driver is built in JDK it means that it is already present in the JDK. 
+If it is not developed in java programming language thus it is not portable even though it is built in JDK       (here internally if any other programming language uses type 1 it converts it to the jar files and can be used further but since it is not developed in java so it is not portable.).
+
+In client side we have to install this jdbc/odbc api.
+
+
+Overally.
+DB independent
+not secured
+not portable
+
+Type 2 - Native API
+-------------------
+In native api driver the jdbc method calls will be converted to the native calls.
+native is keyword which is used in the method which returns some other language.
+
+Native has a partial driver.
+Native performance is better than JDBC API.
+Database dependent here it means for different databases there is different native apis.
+For every database we have download .
+In client side we have to install this native api.
+
+Overally.
+DB dependent
+secured compared to type 1.
+not portable
+better than jdbc / odbc driver
+
+
+Type 3 - Network Protocol
+--------------------------
+Here through network we are connecting another sources and all.
+Here through network we are going to access so we dont need to install in the client side.
+Yes it is built in java so it is portable.
+Since we have to do every thing through network so the communication becomes costly.
+
+Overally.
+portable
+no client side installation needed.
+Security is more here as network is more secured.
+This is database dependent.
+communication is costly.
+
+Type 4 - Thin Driver
+-----------------------
+Overally.
+Thin driver is built in java.
+It is more secured because of java.
+Java is more secured because the code is converted to the byte code and it cant be understand by anyone.Adding restrictions is more easier.
+It is portable.
+Easy to communicate between databases.
+The disadvantage is it is database dependent.That is for every database we have to download each and every driver.
+Internet is not required therefore it is less costly.
+Performance is very good.
+

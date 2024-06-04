@@ -1,0 +1,12 @@
+Internally our container is creating Servlet class,ServletRequest,ServletResponse objects.
+
+The details will be stored in the request object . The data is are not stored directly.They are stored in key value pair.
+The request object which will be created the name attribute will be created and thus the values are stored in there.
+
+e.g., name = "name",name="age"value:xxxxxx,name="email"value:xxxxxx,name="pass":value:xxxxxx
+
+
+getParameter method helps in obtaining the values when keys are passed in as the parameter.
+
+getParameter always returns string type of data.
+getParameter 

@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: rgb(248, 215, 248);
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 19px;
+}
+
+h3:hover {
+    font-size: 30px;
+}
+
+.div {
+    background-color: white;
+    position: absolute;
+    top: 6rem;
+    height: 150px;
+    width: 300px;
+    border: 2px solid black;
+
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+label {
+    margin-left: 20px;
+}
+
+#age {
+    margin-left: 12px;
+}
+
+#submit {
+    position: absolute;
+    /* margin:0px 7rem; */
+    margin: 5px 6rem 0px 8rem;
+}
+
+
+
+div:hover {
+    border-radius: 18px;
+    box-shadow: 0px 0px 20px blue;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(237, 13, 13, 0.5);
+}
+
+#submit {
+    background-image: linear-gradient(rgb(211, 211, 255), rgb(254, 193, 254));
+    padding: 0px 5px;
+}

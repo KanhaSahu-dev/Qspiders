@@ -1,0 +1,42 @@
+package com.org;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+public class Servlet1 extends GenericServlet{
+
+	@Override
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		
+		JDBC ob = new JDBC();
+		boolean bool = ob.check(request);
+		if(bool) {
+			RequestDispatcher rd = request.getRequestDispatcher("index.html");
+			ResultSet rst = ob.getData(request);
+			PrintWriter out = response.getWriter();
+			response.setContentType("text/html");
+			try {
+				rst.next();
+				out.println(rst.getString("name"));
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else {
+			PrintWriter out = response.getWriter();
+			response.setContentType("text/html");
+			out.println("<p>Invalid User Details</p>");
+			RequestDispatcher rd = request.getRequestDispatcher("index.html");
+			rd.forward(request, response);
+		}
+	}
+
+}

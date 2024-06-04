@@ -1,0 +1,158 @@
+write a query to display the details of the employees working as analyst?
+
+Write a query to display tthe jobs of the employees?
+
+Distinct Clause
+---------------
+The distinct clause is used to remove the duplicate values of a given column .
+
+Q)waqtd the job of the employees by removing duplicates?
+select distinct job from emp;
+JOB
+--------
+CLERK
+SALESMAN
+PRESIDEN
+MANAGER
+ANALYST
+
+Q)waqtd the dept no of the employees by removing duplicates ?
+
+Q)waqtd to display the job and dept no of the employees by removing duplicates?
+
+We can use multiple columns as an argument to distinct clause but it will remove the combination of columns in which the values are duplicated.
+
+
+SQL> select distinct job,deptno from emp;
+
+JOB           DEPTNO
+--------- ----------
+MANAGER           20
+PRESIDENT         10
+CLERK             10
+SALESMAN          30
+ANALYST           20
+MANAGER           30
+MANAGER           10
+CLERK             30
+CLERK             20
+
+9 rows selected.
+
+Q)waqtd the annual salary of the employees?
+
+Q) waqtd the salary with a hike of 20 %?
+Q) waqtd to display the name and salary of the employees with a deduction of 50%?
+
+Concatenation Operator
+----------------------
+|| is the concatenation operator this operator is used to merge 2 strings 
+
+SQL> select 'hii '||ename from emp;
+
+'HII'||ENAME
+--------------
+hii SMITH
+hii ALLEN
+hii WARD
+hii JONES
+hii MARTIN
+hii BLAKE
+hii CLARK
+hii SCOTT
+hii KING
+hii TURNER
+hii ADAMS
+hii JAMES
+hii FORD
+hii MILLER 
+
+SQL> select 'hii '||ename||' how are you ' from emp;
+
+'HII'||ENAME||'HOWAREYOU'
+---------------------------
+hii SMITH how are you
+hii ALLEN how are you
+hii WARD how are you
+hii JONES how are you
+hii MARTIN how are you
+hii BLAKE how are you
+hii CLARK how are you
+hii SCOTT how are you
+hii KING how are you
+hii TURNER how are you
+hii ADAMS how are you
+hii JAMES how are you
+hii FORD how are you
+hii MILLER how are you
+
+Logical Operator
+----------------
+There are two types of logical operator and , or
+The and operator returns true if both the conditions are true.Any other cases are false.
+The or operator returns true if any one condition is true.
+
+Q)waqtd the job , deptno of the employees working as manager in dept 10?
+SQL> select job,deptno from emp where job='MANAGER' and deptno=10;
+
+JOB           DEPTNO
+--------- ----------
+MANAGER           10
+
+Q)waqtd the name , dept and job of the employees working as salesman in deptno 30?
+
+SQL> select ename,deptno,job from emp where job='SALESMAN' and deptno=30;
+
+ENAME          DEPTNO JOB
+---------- ---------- ---------
+ALLEN              30 SALESMAN
+WARD               30 SALESMAN
+MARTIN             30 SALESMAN
+TURNER             30 SALESMAN
+
+Q)waqtd the name, deptno and sal of the emp working in deptno 20 and earning salary more than 2200?
+
+SQL> select ename,deptno,sal from emp where deptno=20 and sal>2200;
+
+ENAME          DEPTNO        SAL
+---------- ---------- ----------
+JONES              20       2975
+SCOTT              20       3000
+FORD               20       3000
+
+Q)waqtd the name and sal of the employees those are earning more than 1500 but less than 3000?
+
+SQL> select ename,sal from emp where sal>1500 and sal<3000;
+
+ENAME             SAL
+---------- ----------
+ALLEN            1600
+JONES            2975
+BLAKE            2850
+CLARK            2450
+
+Q)waqtd the name and deptno of the employees working in deptno or 30 ?
+
+SQL> select ename,deptno from emp where deptno=10 or deptno=30;
+
+ENAME          DEPTNO
+---------- ----------
+ALLEN              30
+WARD               30
+MARTIN             30
+BLAKE              30
+CLARK              10
+KING               10
+TURNER             30
+JAMES              30
+MILLER             10
+
+9 rows selected.
+
+Q)waqtd the name , sal and deptno of the employees earning more than 2000 but less than 3000 in deptno 20? 
+
+SQL> select ename,sal,deptno from emp where (sal>2000 and sal<3000 and deptno=20);
+
+ENAME             SAL     DEPTNO
+---------- ---------- ----------
+JONES            2975         20

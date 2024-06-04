@@ -1,0 +1,22 @@
+package com.org;
+
+public class expt {
+	
+	public void accept(String x,String y) {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+class A{
+	
+	static {
+		expt o = new expt();
+		o.accept("hello", "hii");
+	}
+}

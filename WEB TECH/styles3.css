@@ -1,0 +1,26 @@
+table,td,tr{
+    border-collapse:collapse;
+}
+table{
+    background-image: linear-gradient(rgb(177, 250, 242),rgb(158, 158, 240));
+}
+tr,td{
+    width:35px;
+    height:35px;
+}
+
+#red{
+    background-color: red;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#green{
+    background-color: green;
+}
+
+#orange{
+    background-color: orange;
+}

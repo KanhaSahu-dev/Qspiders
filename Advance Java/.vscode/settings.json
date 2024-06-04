@@ -1,0 +1,8 @@
+{
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.project.sourcePaths": [
+        "codes\\com\\deadlock"
+    ],
+    "java.project.referencedLibraries": [],
+    "java.project.outputPath": "codes\\com\\deadlock"
+}

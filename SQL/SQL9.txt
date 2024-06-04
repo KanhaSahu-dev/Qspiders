@@ -1,0 +1,73 @@
+HAVING
+------
+HAVING clause is used to filter the groups.
+The having cluase executes after the group by cluase.
+
+We can use multirow function with having clause.
+And it executes group by group .
+
+Q)waqtd to display the groups of the employees in which minimum 4 employees are working in each dept no?
+
+Order of Execution
+------------------
+From 
+Where
+Group by 
+Having
+Select
+
+Q)waqtd the sal that are repeated ?
+
+Q)WAQTD the no. of emp working in each dept having atleast 2 emp contains a in their names?
+
+SQL> SELECT COUNT(*),DEPTNO FROM EMP
+  2  WHERE ENAME LIKE '%A%'
+  3  GROUP BY DEPTNO
+  4  HAVING COUNT(*)>=2;
+
+  COUNT(*)     DEPTNO
+---------- ----------
+         5         30
+
+Q)WAQTD THE JOB WISE MAX SALARY IF THE MAX SALARY EXCEEDS 2500?
+
+Q)WAQTD NO OF EMP EARNING SAL MORE THAN 1200 IN EACH JOB AND THE TOTAL SALARY NEEDED TO PAY TO THE EMP OF EACH JOB MUST EXCEED 4000?
+
+SQL> SELECT COUNT(*),SUM(SAL),JOB FROM EMP
+  2  WHERE SAL>1200
+  3  GROUP BY JOB
+  4  HAVING SUM(SAL)>4000;
+
+  COUNT(*)   SUM(SAL) JOB
+---------- ---------- ---------
+         4       5600 SALESMAN
+         1       5000 PRESIDENT
+         3       8275 MANAGER
+         2       6000 ANALYST
+
+Q)WAQTD THE NO OF EMP WORKING IN EACH DEPT EXCEPT PRESIDENT ?
+
+
+SQL> SELECT COUNT(*),DEPTNO FROM EMP
+  2  WHERE JOB!='PRESIDENT'
+  3  GROUP BY DEPTNO;
+
+  COUNT(*)     DEPTNO
+---------- ----------
+         6         30
+         5         20
+         2         10
+
+Q)WAQTD THE NO OF EMP AND AVG SAL IN EACH DEPT IF THEIR EARNING SAL MORE THAN 2000;
+SQL> SELECT COUNT(*),AVG(SAL) FROM EMP
+  2  WHERE SAL>2000
+  3  GROUP BY DEPTNO
+  4  ;
+
+  COUNT(*)   AVG(SAL)
+---------- ----------
+         1       2850
+         3 2991.66667
+         2       3725
+
+NEXT CLASS SUB QUERY

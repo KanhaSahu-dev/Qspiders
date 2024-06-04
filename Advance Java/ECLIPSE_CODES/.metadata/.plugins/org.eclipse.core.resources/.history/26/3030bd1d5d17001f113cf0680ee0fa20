@@ -1,0 +1,21 @@
+package com.org;
+
+public class expt {
+	
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}
+
+class A{
+	static String x ;
+	static String y ;
+	public void accept(String x,String y) {
+		A.x = x;
+		A.y = y;
+	}
+	
+}

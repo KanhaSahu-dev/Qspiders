@@ -1,0 +1,8 @@
+									typecasting
+									/		\
+					Primitive type casting		Non primitive type casting
+						/		\					/		\
+					Widening	    Narrowing			Upcasting	Downcasting
+					(Implicitly)	(Explicitly)		(Implicitly)	(Explicitly)
+
+Task 1 ) Write a defination (defn , e.h., , 1 advantage). of the 4 pillars of oops.

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Java Information</title>
+    <style>
+        /* Add animations */
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideUp 1s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div class="container mx-auto p-4 animate-fade-in">
+        <h1 class="text-3xl font-bold mb-4" id="heading">Learn About Java</h1>
+        <p class="text-gray-300 animate-slide-up" id="intro">
+            Java is a popular programming language known for its platform independence, robustness, and versatility. It was developed by James Gosling at Sun Microsystems (now owned by Oracle Corporation).
+        </p>
+        <p class="mt-4" id="keyFeaturesTitle">Key features of Java:</p>
+        <ul class="list-disc ml-6 text-gray-300 animate-slide-up" id="featuresList">
+            <li>Write once, run anywhere (WORA) due to the Java Virtual Machine (JVM).</li>
+            <li>Object-oriented programming (OOP) principles.</li>
+            <li>Rich standard library and extensive community support.</li>
+            <li>Used for web development, mobile apps (Android), server-side applications, and more.</li>
+        </ul>
+        <p class="mt-4 animate-slide-up" id="outro">
+            Whether you're a beginner or an experienced developer, Java remains a powerful language to learn and use!
+        </p>
+        <h2 class="text-2xl font-bold mt-8" id="java8Features">Key Features of Java 8</h2>
+        <ul class="list-disc ml-6 text-gray-300 animate-slide-up" id="java8FeaturesList">
+            <li>Lambda Expressions: Enable functional programming style in Java.</li>
+            <li>Streams API: Provides a fluent, functional-style way of processing collections of objects.</li>
+            <li>Functional Interfaces: The `@FunctionalInterface` annotation and built-in functional interfaces like `Predicate`, `Function`, and `Consumer`.</li>
+            <li>Default Methods: Allow interfaces to have method implementations.</li>
+            <li>Method References: Provide a shorthand syntax for lambda expressions.</li>
+            <li>Optional: A container object that may or may not contain a value, designed to reduce null pointer exceptions.</li>
+            <li>Date and Time API: A new API in the `java.time` package for working with dates, times, durations, and intervals.</li>
+            <li>CompletableFuture: Represents a future result of an asynchronous computation and provides a powerful way to work with asynchronous tasks.</li>
+        </ul>
+        <h2 class="text-2xl font-bold mt-8" id="jdbcFeatures">JDBC (Java Database Connectivity)</h2>
+        <ul class="list-disc ml-6 text-gray-300 animate-slide-up" id="jdbcFeaturesList">
+            <li>Connection Management: Establish connections to a database using a `Connection` object.</li>
+            <li>Statement Execution: Execute SQL statements using `Statement`, `PreparedStatement`, and `CallableStatement` objects.</li>
+            <li>Result Retrieval: Retrieve and process the results of SQL queries.</li>
+            <li>Transaction Management: Control the boundaries of transactions and perform operations in a transactional manner.</li>
+            <li>Exception Handling: Handle database-related exceptions using `SQLException`.</li>
+            <li>Driver Architecture: Different types of drivers provide connectivity to different types of databases.</li>
+            <li>Connection Pooling: Reuse database connections to improve performance and scalability.</li>
+        </ul>
+    </div>
+
+    <!-- Include GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+    <script>
+        // Text animation using internal JavaScript
+        const heading = document.getElementById('heading');
+        const intro = document.getElementById('intro');
+        const keyFeaturesTitle = document.getElementById('keyFeaturesTitle');
+        const featuresList = document.getElementById('featuresList');
+        const outro = document.getElementById('outro');
+        const java8FeaturesTitle = document.getElementById('java8Features');
+        const java8FeaturesList = document.getElementById('java8FeaturesList');
+        const jdbcFeaturesTitle = document.getElementById('jdbcFeatures');
+        const jdbcFeaturesList = document.getElementById('jdbcFeaturesList');
+
+        // Function to start text animation
+        function startTextAnimation() {
+            gsap.fromTo(heading, { opacity: 0 }, { opacity: 1, duration: 1, ease: "power2.out" });
+            gsap.fromTo(intro, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 0.5, ease: "power2.out" });
+            gsap.fromTo(featuresList.children, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 1.5, stagger: 0.2, ease: "power2.out" });
+            gsap.fromTo(outro, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 2.5, ease: "power2.out" });
+            gsap.fromTo(java8FeaturesList.children, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 3.5, stagger: 0.2, ease: "power2.out" });
+            gsap.fromTo(jdbcFeaturesList.children, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 5, stagger: 0.2, ease: "power2.out" });
+        }
+
+        // Call the text animation function when the page loads
+        window.addEventListener('load', startTextAnimation);
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Servlet Information</title>
+    <style>
+        /* Add animations */
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideUp 1s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div class="container mx-auto p-4 animate-fade-in">
+        <h1 class="text-3xl font-bold mb-4" id="heading">Learn About Servlets</h1>
+        <p class="text-gray-300 animate-slide-up" id="intro">
+            Servlets are Java programs that run on a web server. They handle requests from web clients, process them, and generate dynamic web pages in response.
+        </p>
+        <p class="mt-4" id="keyFeaturesTitle">Key features of Servlets:</p>
+        <ul class="list-disc ml-6 text-gray-300 animate-slide-up" id="featuresList">
+            <li>Platform-independent: Servlets can run on any server that supports the Java Servlet specification.</li>
+            <li>Scalable and efficient: Servlets are thread-safe and can handle multiple requests concurrently.</li>
+            <li>Extensible: Servlet API allows developers to extend its functionality through filters, listeners, and annotations.</li>
+            <li>Session management: Servlets can maintain session state across multiple requests using HttpSession.</li>
+        </ul>
+        <p class="mt-4 animate-slide-up" id="outro">
+            Whether you're building a simple website or a complex web application, Servlets provide a powerful tool for server-side development.
+        </p>
+        <h2 class="text-2xl font-bold mt-8" id="servletLifecycle">Servlet Lifecycle</h2>
+        <p class="mt-4 animate-slide-up" id="lifecycleIntro">
+            The lifecycle of a servlet consists of several stages including initialization, service, and destruction.
+        </p>
+        <ul class="list-disc ml-6 text-gray-300 animate-slide-up" id="lifecycleList">
+            <li>Initialization: Servlet container loads and initializes the servlet by calling its init() method.</li>
+            <li>Service: Servlet handles client requests by executing its service() method.</li>
+            <li>Destruction: Servlet container removes the servlet by calling its destroy() method.</li>
+        </ul>
+        <p class="mt-4 animate-slide-up" id="lifecycleOutro">
+            Understanding the servlet lifecycle is crucial for developing robust and efficient web applications.
+        </p>
+    </div>
+
+    <!-- Include GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+    <script>
+        // Text animation using internal JavaScript
+        const heading = document.getElementById('heading');
+        const intro = document.getElementById('intro');
+        const keyFeaturesTitle = document.getElementById('keyFeaturesTitle');
+        const featuresList = document.getElementById('featuresList');
+        const outro = document.getElementById('outro');
+        const lifecycleIntro = document.getElementById('lifecycleIntro');
+        const lifecycleList = document.getElementById('lifecycleList');
+        const lifecycleOutro = document.getElementById('lifecycleOutro');
+
+        // Function to start text animation
+        function startTextAnimation() {
+            gsap.fromTo(heading, { opacity: 0 }, { opacity: 1, duration: 1, ease: "power2.out" });
+            gsap.fromTo(intro, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 0.5, ease: "power2.out" });
+            gsap.fromTo(featuresList.children, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 1.5, stagger: 0.2, ease: "power2.out" });
+            gsap.fromTo(outro, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 2.5, ease: "power2.out" });
+            gsap.fromTo(lifecycleIntro, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 3.5, ease: "power2.out" });
+            gsap.fromTo(lifecycleList.children, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 4.5, stagger: 0.2, ease: "power2.out" });
+            gsap.fromTo(lifecycleOutro, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 6, ease: "power2.out" });
+        }
+
+        // Call the text animation function when the page loads
+        window.addEventListener('load', startTextAnimation);
+    </script>
+</body>
+</html>
